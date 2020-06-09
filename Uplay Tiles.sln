@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Uplay Tiles", "Uplay Tiles\Uplay Tiles.vbproj", "{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|ARM.Build.0 = Debug|ARM
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|ARM.Deploy.0 = Debug|ARM
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|ARM64.Build.0 = Debug|ARM64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|x64.ActiveCfg = Debug|x64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|x64.Build.0 = Debug|x64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|x64.Deploy.0 = Debug|x64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|x86.ActiveCfg = Debug|x86
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|x86.Build.0 = Debug|x86
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Debug|x86.Deploy.0 = Debug|x86
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|ARM.ActiveCfg = Release|ARM
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|ARM.Build.0 = Release|ARM
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|ARM.Deploy.0 = Release|ARM
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|ARM64.ActiveCfg = Release|ARM64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|ARM64.Build.0 = Release|ARM64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|ARM64.Deploy.0 = Release|ARM64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|x64.ActiveCfg = Release|x64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|x64.Build.0 = Release|x64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|x64.Deploy.0 = Release|x64
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|x86.ActiveCfg = Release|x86
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|x86.Build.0 = Release|x86
+		{B789C5FB-BEBE-40DF-9A67-AE974EC8B6DC}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AAC4BC6-826B-4F00-9BC1-35CAE7D76351}
+	EndGlobalSection
+EndGlobal
