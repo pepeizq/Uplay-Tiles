@@ -152,68 +152,7 @@ Module Uplay
                 gv.Items.Clear()
 
                 For Each juego In listaJuegos
-                    Dim gridImagen As New Grid
-
-                    Dim imagen As New ImageEx With {
-                        .Source = juego.ImagenAncha,
-                        .IsCacheEnabled = True,
-                        .Stretch = Stretch.UniformToFill
-                    }
-
-                    gridImagen.Children.Add(imagen)
-
-                    If Not juego.Pais = Nothing Then
-                        Dim pais As New ImageEx With {
-                            .IsCacheEnabled = True,
-                            .Stretch = Stretch.UniformToFill,
-                            .Width = 35,
-                            .Height = 23,
-                            .HorizontalAlignment = HorizontalAlignment.Right,
-                            .VerticalAlignment = VerticalAlignment.Bottom
-                        }
-
-                        If Not juego.Pais = Nothing Then
-                            pais.Source = "Assets/Paises/" + juego.Pais + ".png"
-                        End If
-
-                        gridImagen.Children.Add(pais)
-                    End If
-
-                    Dim boton As New Button With {
-                        .Tag = juego,
-                        .Content = gridImagen,
-                        .Padding = New Thickness(0, 0, 0, 0)
-                    }
-
-                    Dim panel As New DropShadowPanel With {
-                        .Margin = New Thickness(5, 5, 5, 5),
-                        .ShadowOpacity = 0.9,
-                        .BlurRadius = 5
-                    }
-
-                    panel.Content = boton
-
-                    Dim tbToolTip As TextBlock = New TextBlock With {
-                        .Text = juego.Titulo,
-                        .FontSize = 16
-                    }
-
-                    ToolTipService.SetToolTip(boton, tbToolTip)
-                    ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
-
-                    AddHandler boton.Click, AddressOf BotonTile_Click
-                    AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
-                    AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
-
-                    If juego.Pais = Nothing Then
-                        gv.Items.Add(panel)
-                    Else
-                        If ApplicationData.Current.LocalSettings.Values("regiones") = True Then
-                            If juego.Pais = "Russia" And ApplicationData.Current.LocalSettings.Values("region_rusia") = True Then
-                                gv.Items.Add(panel)
-                            End If
-                        End If
-                    End If
+                    BotonEstilo(juego, gv)
                 Next
             Else
                 gridTiles.Visibility = Visibility.Collapsed
@@ -228,6 +167,72 @@ Module Uplay
 
         botonCache.IsEnabled = True
 
+    End Sub
+
+    Public Sub BotonEstilo(juego As Tile, gv As GridView)
+        Dim gridImagen As New Grid
+
+        Dim imagen As New ImageEx With {
+            .Source = juego.ImagenAncha,
+            .IsCacheEnabled = True,
+            .Stretch = Stretch.UniformToFill
+        }
+
+        gridImagen.Children.Add(imagen)
+
+        If Not juego.Pais = Nothing Then
+            Dim pais As New ImageEx With {
+                .IsCacheEnabled = True,
+                .Stretch = Stretch.UniformToFill,
+                .Width = 35,
+                .Height = 23,
+                .HorizontalAlignment = HorizontalAlignment.Right,
+                .VerticalAlignment = VerticalAlignment.Bottom
+            }
+
+            If Not juego.Pais = Nothing Then
+                pais.Source = "Assets/Paises/" + juego.Pais + ".png"
+            End If
+
+            gridImagen.Children.Add(pais)
+        End If
+
+        Dim boton As New Button With {
+            .Tag = juego,
+            .Content = gridImagen,
+            .Padding = New Thickness(0, 0, 0, 0)
+        }
+
+        Dim panel As New DropShadowPanel With {
+            .Margin = New Thickness(5, 5, 5, 5),
+            .ShadowOpacity = 0.9,
+            .BlurRadius = 5,
+            .MaxWidth = anchoColumna + 10
+        }
+
+        panel.Content = boton
+
+        Dim tbToolTip As TextBlock = New TextBlock With {
+            .Text = juego.Titulo,
+            .FontSize = 16
+        }
+
+        ToolTipService.SetToolTip(boton, tbToolTip)
+        ToolTipService.SetPlacement(boton, PlacementMode.Mouse)
+
+        AddHandler boton.Click, AddressOf BotonTile_Click
+        AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
+        AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
+
+        If juego.Pais = Nothing Then
+            gv.Items.Add(panel)
+        Else
+            If ApplicationData.Current.LocalSettings.Values("regiones") = True Then
+                If juego.Pais = "Russia" And ApplicationData.Current.LocalSettings.Values("region_rusia") = True Then
+                    gv.Items.Add(panel)
+                End If
+            End If
+        End If
     End Sub
 
     Private Async Sub BotonTile_Click(sender As Object, e As RoutedEventArgs)

@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="0c0c01c1-d3a0-4f25-bfea-d98b94a0592e"
-    Publisher="CN=pepeizq"
+    Name="5078pepeizq.UplayTiles"
+    Publisher="CN=C91088FC-231C-4E13-86D1-5F9658173DA7"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="0c0c01c1-d3a0-4f25-bfea-d98b94a0592e" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="92e7decf-08f6-4e69-867a-7283f3035b1f" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>Uplay Tiles</DisplayName>
-    <PublisherDisplayName>pepeizq</PublisherDisplayName>
+    <PublisherDisplayName>pepeizq&apos;s apps</PublisherDisplayName>
     <Logo>Assets\Logos\StoreLogo.png</Logo>
   </Properties>
 

@@ -28,7 +28,7 @@ Namespace Tiles
 
             '-----------------------
 
-            Dim nuevaTile As New SecondaryTile(tile.IDUplay, tile.Titulo, tile.Enlace, New Uri("ms-appdata:///local/" + tile.IDUplay + "ancha.png", UriKind.RelativeOrAbsolute), Microsoft.Toolkit.Uwp.Notifications.TileSize.Wide)
+            Dim nuevaTile As New SecondaryTile(tile.IDUplay, tile.Titulo, tile.Enlace, New Uri("ms-appdata:///local/" + tile.IDUplay + "ancha.png", UriKind.RelativeOrAbsolute), Windows.UI.StartScreen.TileSize.Wide310x150)
 
             nuevaTile.VisualElements.Square71x71Logo = New Uri("ms-appdata:///local/" + tile.IDUplay + "pequena.png", UriKind.RelativeOrAbsolute)
             nuevaTile.VisualElements.Square150x150Logo = New Uri("ms-appdata:///local/" + tile.IDUplay + "mediana.png", UriKind.RelativeOrAbsolute)

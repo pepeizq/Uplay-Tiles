@@ -7,8 +7,8 @@ Imports Windows.UI.Core
 
 Module MasCosas
 
-    Dim traduccion As String = "https://poeditor.com/join/project/C7iESiyyRJ"
-    Dim codigoFuente As String = "https://github.com/pepeizq/Epic-Games-Tiles"
+    Dim traduccion As String = "https://poeditor.com/join/project/93E4lCQLWI"
+    Dim codigoFuente As String = "https://github.com/pepeizq/Uplay-Tiles"
 
     Public Sub Generar()
 
