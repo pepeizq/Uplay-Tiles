@@ -170,6 +170,7 @@ Module Uplay
     End Sub
 
     Public Sub BotonEstilo(juego As Tile, gv As GridView)
+
         Dim gridImagen As New Grid
 
         Dim imagen As New ImageEx With {
@@ -233,6 +234,7 @@ Module Uplay
                 End If
             End If
         End If
+
     End Sub
 
     Private Async Sub BotonTile_Click(sender As Object, e As RoutedEventArgs)
