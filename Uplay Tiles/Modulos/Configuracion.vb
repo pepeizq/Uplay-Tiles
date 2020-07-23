@@ -24,8 +24,6 @@ Module Configuracion
         Dim tbTitulo As TextBlock = pagina.FindName("tbTitulo")
         tbTitulo.Text = Package.Current.DisplayName + " (" + Package.Current.Id.Version.Major.ToString + "." + Package.Current.Id.Version.Minor.ToString + "." + Package.Current.Id.Version.Build.ToString + "." + Package.Current.Id.Version.Revision.ToString + ")"
 
-        Uplay.Generar()
-
     End Sub
 
     Public Sub CargarRegiones(estado As Boolean)

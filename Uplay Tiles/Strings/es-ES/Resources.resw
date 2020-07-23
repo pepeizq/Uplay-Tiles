@@ -273,10 +273,13 @@
   <data name="ContactAddGames.Text" xml:space="preserve">
     <value>Antes de contactar conmigo necesito saber la id del juego que falta, para ello basta con que hagáis un acceso directo del juego al escritorio desde Uplay y que me mandéis la linea de texto que os indico en la foto.</value>
   </data>
-  <data name="SelectGameContact.Text" xml:space="preserve">
-    <value>Si falta algun juego, contacta conmigo con la siguiente información</value>
+  <data name="CacheMode.Text" xml:space="preserve">
+    <value>Modo Cache</value>
   </data>
-  <data name="SelectGameContact2.Text" xml:space="preserve">
-    <value>Abrir</value>
+  <data name="CacheMode2.Text" xml:space="preserve">
+    <value>Si activas este modo, la app descarga en tu disco duro cada imagen necesaria del juego para añadir Tiles.</value>
+  </data>
+  <data name="MissingGames" xml:space="preserve">
+    <value>Juegos que Faltan</value>
   </data>
 </root>
