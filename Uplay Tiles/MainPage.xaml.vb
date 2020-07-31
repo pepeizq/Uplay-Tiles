@@ -1,5 +1,4 @@
-﻿Imports FontAwesome.UWP
-Imports Microsoft.Toolkit.Uwp.Helpers
+﻿Imports Microsoft.Toolkit.Uwp.Helpers
 Imports Windows.ApplicationModel.Core
 Imports Windows.Storage
 Imports Windows.System
@@ -13,9 +12,9 @@ Public NotInheritable Class MainPage
 
         Dim recursos As New Resources.ResourceLoader()
 
-        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Tiles"), FontAwesomeIcon.Home, 0))
-        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesomeIcon.Cog, 1))
-        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("MissingGames"), FontAwesomeIcon.Gamepad, 2))
+        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Tiles"), FontAwesome5.EFontAwesomeIcon.Solid_Home, 0))
+        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesome5.EFontAwesomeIcon.Solid_Cog, 1))
+        nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("MissingGames"), FontAwesome5.EFontAwesomeIcon.Solid_Gamepad, 2))
         nvPrincipal.MenuItems.Add(New NavigationViewItemSeparator)
         nvPrincipal.MenuItems.Add(MasCosas.Generar("https://github.com/pepeizq/Uplay-Tiles", "https://poeditor.com/join/project/93E4lCQLWI"))
 
@@ -33,10 +32,6 @@ Public NotInheritable Class MainPage
                 GridVisibilidad(gridTiles, item.Text)
 
                 If spProgreso.Visibility = Visibility.Visible Then
-                    gridSeleccionarJuego.Visibility = Visibility.Collapsed
-                End If
-
-                If gridAvisoNoJuegos.Visibility = Visibility.Visible Then
                     gridSeleccionarJuego.Visibility = Visibility.Collapsed
                 End If
 
