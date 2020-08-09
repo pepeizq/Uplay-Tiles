@@ -16,8 +16,7 @@ Public NotInheritable Class MainPage
         nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesome5.EFontAwesomeIcon.Solid_Cog, 1))
         nvPrincipal.MenuItems.Add(NavigationViewItems.Generar(recursos.GetString("MissingGames"), FontAwesome5.EFontAwesomeIcon.Solid_Gamepad, 2))
         nvPrincipal.MenuItems.Add(New NavigationViewItemSeparator)
-        nvPrincipal.MenuItems.Add(MasCosas.Generar("https://github.com/pepeizq/Uplay-Tiles", "https://poeditor.com/join/project/93E4lCQLWI"))
-
+        nvPrincipal.MenuItems.Add(MasCosas.Generar("https://github.com/pepeizq/Uplay-Tiles", "https://poeditor.com/join/project/93E4lCQLWI", "https://www.youtube.com/watch?v=bE-DRINSfAs"))
 
     End Sub
 
