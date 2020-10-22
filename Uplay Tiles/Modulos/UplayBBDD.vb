@@ -50,6 +50,7 @@
             New UplayBBDDEntrada("For Honor", "3458", "304390", Nothing, Nothing),
             New UplayBBDDEntrada("From Dust", "30", "33460", Nothing, "https://i.imgur.com/1vCKjpV.png"),
             New UplayBBDDEntrada("Heroes of Might & Magic V", "87", "15170", Nothing, "https://i.imgur.com/9aFXwiT.png"),
+            New UplayBBDDEntrada("Hyper Scape", "11957", Nothing, Nothing, Nothing),
             New UplayBBDDEntrada("I am Alive", "93", "214250", Nothing, "https://i.imgur.com/4YmaDPM.png"),
             New UplayBBDDEntrada("Might & Magic: Heroes VI", "44", "48220", Nothing, "https://i.imgur.com/zqQz8Tf.png"),
             New UplayBBDDEntrada("Might & Magic: Heroes VII", "1176", "321960", Nothing, Nothing),
@@ -100,7 +101,8 @@
             New UplayBBDDEntrada("Watch_Dogs", "543", "243470", "Russia", "https://i.imgur.com/JY7QQlh.jpg"),
             New UplayBBDDEntrada("Watch_Dogs 2", "2688", "447040", Nothing, Nothing),
             New UplayBBDDEntrada("World In Conflict", "90", "21760", Nothing, "https://i.imgur.com/GvdaWUl.png"),
-            New UplayBBDDEntrada("Zeit²", "340", "33390", Nothing, "https://i.imgur.com/1FbnTGZ.png")
+            New UplayBBDDEntrada("Zeit²", "340", "33390", Nothing, "https://i.imgur.com/1FbnTGZ.png"),
+            New UplayBBDDEntrada("Zombi", "1653", "339230", Nothing, "https://i.imgur.com/v2RyfEO.png")
         }
 
         Return lista
@@ -152,7 +154,11 @@
             New UplayBBDDImagenes("267", Nothing,
                                           Nothing,
                                           "https://i.imgur.com/DGONcLK.jpg",
-                                          "https://i.imgur.com/str1G1w.png")
+                                          "https://i.imgur.com/str1G1w.png"),
+            New UplayBBDDImagenes("11957", Nothing,
+                                          "https://i.imgur.com/qO1LGtE.png",
+                                          "https://i.imgur.com/JhheFUu.png",
+                                          "https://i.imgur.com/6QkTo5h.png")
         }
 
         For Each juego In lista
