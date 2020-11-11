@@ -255,14 +255,11 @@
   <data name="GamePersonalizationInfo.Text" xml:space="preserve">
     <value>Click on the image to customize it before adding the Tile</value>
   </data>
-  <data name="ConfigRegions.Content" xml:space="preserve">
-    <value>Show regional games (you must restart the app to show them)</value>
-  </data>
   <data name="Contact.Text" xml:space="preserve">
     <value>Contact</value>
   </data>
   <data name="ContactAddGames.Text" xml:space="preserve">
-    <value>Before contacting me I need to know the id of the missing game, for this it is enough that you make a shortcut of the game to the desktop from Uplay and that you send me the text line that I indicate in the screenshot.</value>
+    <value>Before contacting me I need to know the country where you live and the id of the missing game, for this it is enough that you make a shortcut of the game to the desktop from Uplay and that you will send me the text line that I indicate in the screenshot.</value>
   </data>
   <data name="CacheMode.Text" xml:space="preserve">
     <value>Cache Mode</value>

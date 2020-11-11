@@ -89,11 +89,9 @@ Module Uplay
 
                                     End Try
 
-                                    Dim imagenGrande As String = String.Empty
+                                    Dim imagenGrande As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "grande")
 
-                                    If Not juegoBBDD.ImagenVertical = Nothing Then
-                                        imagenGrande = Await Cache.DescargarImagen(juegoBBDD.ImagenVertical, juegoBBDD.IDSteam, "grande")
-                                    Else
+                                    If imagenGrande = Nothing Then
                                         Try
                                             imagenGrande = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/library_600x900.jpg", juegoBBDD.IDSteam, "grande")
                                         Catch ex As Exception
@@ -109,29 +107,46 @@ Module Uplay
                                         End If
                                     End If
 
-                                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, juegoBBDD.IDSteam, "uplay://launch/" + juegoBBDD.IDUplay + "/0", Nothing, imagenLogo, imagenAncha, imagenGrande, juegoBBDD.Pais)
+                                    Dim enlace As String = "uplay://launch/" + juegoBBDD.IDUplay + "/0"
+                                    Dim pais As New Windows.Globalization.GeographicRegion
 
-                                    listaJuegos.Add(juego)
-                                End If
-                            Else
-                                Dim busqueda As UplayBBDDImagenes = UplayBBDD.Imagenes(juegoBBDD.IDUplay)
+                                    If Not juegoBBDD.IDUplayOtrosPaises Is Nothing Then
+                                        If juegoBBDD.IDUplayOtrosPaises.Count > 0 Then
+                                            For Each paisID In juegoBBDD.IDUplayOtrosPaises
+                                                If pais.CodeTwoLetter.ToUpper = paisID.Pais.ToUpper Then
+                                                    enlace = "uplay://launch/" + paisID.ID + "/0"
+                                                End If
+                                            Next
+                                        End If
+                                    End If
 
-                                If Not busqueda Is Nothing Then
-                                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, juegoBBDD.IDSteam, "uplay://launch/" + juegoBBDD.IDUplay + "/0", busqueda.ImagenIcono, busqueda.ImagenLogo, busqueda.ImagenAncha, busqueda.ImagenGrande, juegoBBDD.Pais)
-
+                                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, juegoBBDD.IDSteam, enlace, Nothing, imagenLogo, imagenAncha, imagenGrande)
                                     listaJuegos.Add(juego)
                                 End If
                             End If
                         End If
                     End If
                 Else
-                    Dim busqueda As UplayBBDDImagenes = UplayBBDD.Imagenes(juegoBBDD.IDUplay)
+                    Dim imagenIcono As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "icono")
+                    Dim imagenLogo As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "logo")
+                    Dim imagenAncha As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "ancha")
+                    Dim imagenGrande As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "grande")
 
-                    If Not busqueda Is Nothing Then
-                        Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, juegoBBDD.IDSteam, "uplay://launch/" + juegoBBDD.IDUplay + "/0", busqueda.ImagenIcono, busqueda.ImagenLogo, busqueda.ImagenAncha, busqueda.ImagenGrande, juegoBBDD.Pais)
+                    Dim enlace As String = "uplay://launch/" + juegoBBDD.IDUplay + "/0"
+                    Dim pais As New Windows.Globalization.GeographicRegion
 
-                        listaJuegos.Add(juego)
+                    If Not juegoBBDD.IDUplayOtrosPaises Is Nothing Then
+                        If juegoBBDD.IDUplayOtrosPaises.Count > 0 Then
+                            For Each paisID In juegoBBDD.IDUplayOtrosPaises
+                                If pais.CodeTwoLetter.ToUpper = paisID.Pais.ToUpper Then
+                                    enlace = "uplay://launch/" + paisID.ID + "/0"
+                                End If
+                            Next
+                        End If
                     End If
+
+                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, Nothing, enlace, imagenIcono, imagenLogo, imagenAncha, imagenGrande)
+                    listaJuegos.Add(juego)
                 End If
             End If
 
@@ -188,8 +203,6 @@ Module Uplay
 
         Dim boton As New Button
 
-        Dim gridImagen As New Grid
-
         Dim imagen As New ImageEx With {
             .Source = juego.ImagenGrande,
             .IsCacheEnabled = True,
@@ -203,27 +216,8 @@ Module Uplay
             imagen.Source = juego.ImagenAncha
         End If
 
-        gridImagen.Children.Add(imagen)
-
-        If Not juego.Pais = Nothing Then
-            Dim pais As New ImageEx With {
-                .IsCacheEnabled = True,
-                .Stretch = Stretch.UniformToFill,
-                .Width = 35,
-                .Height = 23,
-                .HorizontalAlignment = HorizontalAlignment.Right,
-                .VerticalAlignment = VerticalAlignment.Bottom
-            }
-
-            If Not juego.Pais = Nothing Then
-                pais.Source = "Assets/Paises/" + juego.Pais + ".png"
-            End If
-
-            gridImagen.Children.Add(pais)
-        End If
-
         boton.Tag = juego
-        boton.Content = gridImagen
+        boton.Content = imagen
         boton.Padding = New Thickness(0, 0, 0, 0)
         boton.Background = New SolidColorBrush(Colors.Transparent)
 
@@ -242,15 +236,7 @@ Module Uplay
         AddHandler boton.PointerEntered, AddressOf UsuarioEntraBoton
         AddHandler boton.PointerExited, AddressOf UsuarioSaleBoton
 
-        If juego.Pais = Nothing Then
-            gv.Items.Add(panel)
-        Else
-            If ApplicationData.Current.LocalSettings.Values("regiones") = True Then
-                If juego.Pais = "Russia" And ApplicationData.Current.LocalSettings.Values("region_rusia") = True Then
-                    gv.Items.Add(panel)
-                End If
-            End If
-        End If
+        gv.Items.Add(panel)
 
     End Sub
 
@@ -316,11 +302,15 @@ Module Uplay
         Dim imagenGrande As ImageEx = pagina.FindName("imagenTileGrande")
         imagenGrande.Source = Nothing
 
-        Try
-            juego.ImagenIcono = Await Cache.DescargarImagen(Await Steam.SacarIcono(juego.IDSteam), juego.IDSteam, "icono")
-        Catch ex As Exception
+        If juego.ImagenIcono = Nothing Then
+            If Not juego.IDSteam = Nothing Then
+                Try
+                    juego.ImagenIcono = Await Cache.DescargarImagen(Await Steam.SacarIcono(juego.IDSteam), juego.IDSteam, "icono")
+                Catch ex As Exception
 
-        End Try
+                End Try
+            End If
+        End If
 
         If Not juego.ImagenIcono = Nothing Then
             imagenPequeña.Source = juego.ImagenIcono

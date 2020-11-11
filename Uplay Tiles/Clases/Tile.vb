@@ -10,11 +10,8 @@
     Public ImagenAncha As String
     Public ImagenGrande As String
 
-    Public Pais As String
-
     Public Sub New(ByVal titulo As String, ByVal idUplay As String, ByVal idSteam As String, ByVal enlace As String,
-                   ByVal imagenIcono As String, ByVal imagenLogo As String, ByVal imagenAncha As String, ByVal imagenGrande As String,
-                   ByVal pais As String)
+                   ByVal imagenIcono As String, ByVal imagenLogo As String, ByVal imagenAncha As String, ByVal imagenGrande As String)
         Me.Titulo = titulo
         Me.IDUplay = idUplay
         Me.IDSteam = idSteam
@@ -24,8 +21,6 @@
         Me.ImagenLogo = imagenLogo
         Me.ImagenAncha = imagenAncha
         Me.ImagenGrande = imagenGrande
-
-        Me.Pais = pais
     End Sub
 
 End Class

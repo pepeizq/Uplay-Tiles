@@ -452,33 +452,6 @@
                                     </LinearGradientBrush>
                                 </StackPanel.Background>
 
-                                <Grid x:Name="gridConfigTiles" HorizontalAlignment="Stretch" Padding="20,10" Background="{StaticResource GridTituloBackground}">
-                                    <TextBlock Text="Tiles" FontSize="16" Foreground="White"/>
-                                </Grid>
-
-                                <StackPanel Orientation="Vertical" Padding="20">
-                                    <CheckBox x:Name="cbConfigRegiones" x:Uid="ConfigRegions" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton"/>
-
-                                    <GridView x:Name="gvRegiones" Visibility="Collapsed" Margin="0,20,0,0">
-                                        <CheckBox x:Name="cbConfigRegionRusia" PointerEntered="UsuarioEntraBoton" PointerExited="UsuarioSaleBoton">
-                                            <CheckBox.Content>
-                                                <Grid>
-                                                    <controls:ImageEx Source="Assets/Paises/Russia.png" IsCacheEnabled="True" Width="70" Height="47"/>
-                                                </Grid>
-                                            </CheckBox.Content>
-                                        </CheckBox>
-                                    </GridView>
-                                </StackPanel> 
-                            </StackPanel>
-
-                            <StackPanel Orientation="Vertical" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" Margin="0,50,0,0">
-                                <StackPanel.Background>
-                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                        <GradientStop Color="#aeb0b5" Offset="0.5" />
-                                        <GradientStop Color="#8f9299" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </StackPanel.Background>
-
                                 <Grid x:Name="gridConfigCache" HorizontalAlignment="Stretch" Padding="20,10" Background="{StaticResource GridTituloBackground}">
                                     <TextBlock Text="Cache" FontSize="16" Foreground="White"/>
                                 </Grid>

@@ -95,12 +95,12 @@ Public NotInheritable Class MainPage
                                                                    If estado = True Then
                                                                        gridPersonalizarTiles.Background = App.Current.Resources("GridAcrilico")
                                                                        gridConfig.Background = App.Current.Resources("GridAcrilico")
-                                                                       gridConfigTiles.Background = App.Current.Resources("GridTituloBackground")
+                                                                       gridConfigCache.Background = App.Current.Resources("GridTituloBackground")
                                                                        gridContactarAñadirJuegos.Background = App.Current.Resources("GridAcrilico")
                                                                    Else
                                                                        gridPersonalizarTiles.Background = New SolidColorBrush(Colors.LightGray)
                                                                        gridConfig.Background = New SolidColorBrush(Colors.LightGray)
-                                                                       gridConfigTiles.Background = New SolidColorBrush(App.Current.Resources("ColorPrimario"))
+                                                                       gridConfigCache.Background = New SolidColorBrush(App.Current.Resources("ColorPrimario"))
                                                                        gridContactarAñadirJuegos.Background = New SolidColorBrush(Colors.LightGray)
                                                                    End If
                                                                End Sub)
@@ -281,30 +281,6 @@ Public NotInheritable Class MainPage
     End Sub
 
     'CONFIG-----------------------------------------------------------------------------
-
-    Private Sub CbConfigRegiones_Checked(sender As Object, e As RoutedEventArgs) Handles cbConfigRegiones.Checked
-
-        Configuracion.CargarRegiones(True)
-
-    End Sub
-
-    Private Sub CbConfigRegiones_Unchecked(sender As Object, e As RoutedEventArgs) Handles cbConfigRegiones.Unchecked
-
-        Configuracion.CargarRegiones(False)
-
-    End Sub
-
-    Private Sub CbConfigRegionRusia_Checked(sender As Object, e As RoutedEventArgs) Handles cbConfigRegionRusia.Checked
-
-        Configuracion.CargarRegionesRusia(True)
-
-    End Sub
-
-    Private Sub CbConfigRegionRusia_Unchecked(sender As Object, e As RoutedEventArgs) Handles cbConfigRegionRusia.Unchecked
-
-        Configuracion.CargarRegionesRusia(False)
-
-    End Sub
 
     Private Async Sub BotonComprarApp_Click(sender As Object, e As RoutedEventArgs) Handles botonComprarApp.Click
 
