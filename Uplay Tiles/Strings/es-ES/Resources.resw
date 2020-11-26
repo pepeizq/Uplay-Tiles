@@ -120,169 +120,37 @@
   <data name="AddTile.Text" xml:space="preserve">
     <value>Añadir Tile</value>
   </data>
+  <data name="BuyApp.Text" xml:space="preserve">
+    <value>Comprar App</value>
+  </data>
   <data name="Config" xml:space="preserve">
     <value>Configuración</value>
   </data>
-  <data name="MoreThings_Contact" xml:space="preserve">
-    <value>Contactar</value>
+  <data name="Games" xml:space="preserve">
+    <value>Juegos</value>
   </data>
-  <data name="GamesDetected" xml:space="preserve">
-    <value>juegos detectados</value>
+  <data name="LargeTile.Text" xml:space="preserve">
+    <value>Tile Grande</value>
   </data>
-  <data name="MoreThings_HelpTranslate" xml:space="preserve">
-    <value>Ayuda a Traducir</value>
-  </data>
-  <data name="MoreThings_MoreApps" xml:space="preserve">
-    <value>Más Apps</value>
-  </data>
-  <data name="MoreThings" xml:space="preserve">
-    <value>Más Cosas</value>
-  </data>
-  <data name="MoreThings_ReportBug" xml:space="preserve">
-    <value>Informa de un Fallo</value>
-  </data>
-  <data name="SelectGame.Text" xml:space="preserve">
-    <value>Selecciona un juego (debes tener el juego en Uplay)</value>
-  </data>
-  <data name="MoreThings_SourceCode" xml:space="preserve">
-    <value>Código Fuente</value>
-  </data>
-  <data name="Tiles" xml:space="preserve">
-    <value>Tiles</value>
-  </data>
-  <data name="Change" xml:space="preserve">
-    <value>Cambiar Carpeta</value>
-  </data>
-  <data name="StoreDescription" xml:space="preserve">
-    <value>Añade Tiles en el menú de Inicio de Windows 10 para tus juegos de Uplay.</value>
-  </data>
-  <data name="GameSelectedTiles.Text" xml:space="preserve">
-    <value>Imágenes para incluir en la Tile de este juego:</value>
-  </data>
-  <data name="MoreThings_Back" xml:space="preserve">
-    <value>Volver</value>
-  </data>
-  <data name="StoreTags" xml:space="preserve">
-    <value>Uplay;Menu Inicio;Tile;Tiles;Juegos;Windows</value>
-  </data>
-  <data name="Back.Text" xml:space="preserve">
-    <value>Volver</value>
-  </data>
-  <data name="Reset.Text" xml:space="preserve">
-    <value>Reset</value>
-  </data>
-  <data name="ConfigCleanCache.Text" xml:space="preserve">
-    <value>Limpiar Cache</value>
-  </data>
-  <data name="Options.Text" xml:space="preserve">
-    <value>Opciones</value>
-  </data>
-  <data name="OptionsSource.Text" xml:space="preserve">
-    <value>Fuente</value>
-  </data>
-  <data name="OptionsSourceComputer.Text" xml:space="preserve">
-    <value>Busca en tu Ordenador</value>
-  </data>
-  <data name="OptionsSourceInfo.Text" xml:space="preserve">
-    <value>Cambia la imagen con una en tu ordenador o una de Internet:</value>
-  </data>
-  <data name="OptionsSourceUbication.Text" xml:space="preserve">
-    <value>Ubicación de la Imagen:</value>
-  </data>
-  <data name="OptionsSourceUbication1.Content" xml:space="preserve">
-    <value>Caja Interior</value>
-  </data>
-  <data name="OptionsSourceUbication2.Content" xml:space="preserve">
-    <value>Caja Exterior</value>
-  </data>
-  <data name="OptionsSourceInternet.Text" xml:space="preserve">
-    <value>Añade la dirección de la imagen:</value>
-  </data>
-  <data name="OptionsBackground.Text" xml:space="preserve">
-    <value>Fondo</value>
-  </data>
-  <data name="OptionsSourceStretch.Text" xml:space="preserve">
-    <value>Estiramiento de la imagen:</value>
-  </data>
-  <data name="OptionsSourceStretch1.Content" xml:space="preserve">
-    <value>Uniforme y Rellenar</value>
-  </data>
-  <data name="OptionsSourceStretch2.Content" xml:space="preserve">
-    <value>Uniforme</value>
-  </data>
-  <data name="OptionsSourceStretch3.Content" xml:space="preserve">
-    <value>Rellenar</value>
-  </data>
-  <data name="OptionsSourceStretch4.Content" xml:space="preserve">
-    <value>Ninguno</value>
-  </data>
-  <data name="OptionsDetails.Text" xml:space="preserve">
-    <value>Detalles</value>
-  </data>
-  <data name="OptionsMargin.Text" xml:space="preserve">
-    <value>Margen</value>
-  </data>
-  <data name="OptionsTitle.Content" xml:space="preserve">
-    <value>Mostrar Título del Juego</value>
-  </data>
-  <data name="OptionsTitleInfo.Text" xml:space="preserve">
-    <value>El título se mostrará en la Tile abajo a la izquierda</value>
-  </data>
-  <data name="OptionsMove.Text" xml:space="preserve">
-    <value>Mover la Imagen</value>
-  </data>
-  <data name="OptionsPlatform.Text" xml:space="preserve">
-    <value>Plataforma</value>
-  </data>
-  <data name="OptionsPlatformIcon.Content" xml:space="preserve">
-    <value>Enseñar Icono de la Plataforma</value>
-  </data>
-  <data name="OptionsPlatformPosition.Text" xml:space="preserve">
-    <value>Posición:</value>
-  </data>
-  <data name="OptionsPlatformPosition1.Content" xml:space="preserve">
-    <value>Arriba Izquierda</value>
-  </data>
-  <data name="OptionsPlatformPosition2.Content" xml:space="preserve">
-    <value>Arriba Derecha</value>
-  </data>
-  <data name="OptionsPlatformPosition3.Content" xml:space="preserve">
-    <value>Abajo Izquierda</value>
-  </data>
-  <data name="OptionsPlatformPosition4.Content" xml:space="preserve">
-    <value>Abajo Derecha</value>
-  </data>
-  <data name="GamePersonalizationInfo.Text" xml:space="preserve">
-    <value>Clickea en la imagen para personalizarla antes de añadir la Tile</value>
-  </data>
-  <data name="Contact.Text" xml:space="preserve">
-    <value>Contactar</value>
-  </data>
-  <data name="ContactAddGames.Text" xml:space="preserve">
-    <value>Antes de contactar conmigo necesito saber el país donde vives y la id del juego que falta, para ello basta con que hagáis un acceso directo del juego al escritorio desde Uplay y que me mandéis la linea de texto que os indico en la foto.</value>
-  </data>
-  <data name="CacheMode.Text" xml:space="preserve">
-    <value>Modo Cache</value>
-  </data>
-  <data name="CacheMode2.Text" xml:space="preserve">
-    <value>Si activas este modo, la app descarga en tu disco duro cada imagen necesaria del juego para añadir Tiles.</value>
+  <data name="MediumTile.Text" xml:space="preserve">
+    <value>Tile Mediana</value>
   </data>
   <data name="MissingGames" xml:space="preserve">
     <value>Juegos que Faltan</value>
   </data>
-  <data name="MoreThings_Video" xml:space="preserve">
-    <value>Vídeo en YouTube</value>
+  <data name="Personalization.Text" xml:space="preserve">
+    <value>Personalización</value>
   </data>
-  <data name="MoreThings_RateApp" xml:space="preserve">
-    <value>Califica la App</value>
-  </data>
-  <data name="MoreThings_RateAppThanks" xml:space="preserve">
-    <value>Gracias por calificar la app</value>
-  </data>
-  <data name="BuyApp.Text" xml:space="preserve">
-    <value>Comprar App</value>
+  <data name="SmallTile.Text" xml:space="preserve">
+    <value>Tile Pequeña</value>
   </data>
   <data name="TrialMessage.Text" xml:space="preserve">
-    <value>Estás usando la versión de prueba de la app, está limitada a 1 Tile.</value>
+    <value>Estás usando la versión de prueba de la aplicación, solo puedes tener activa una Tile.</value>
+  </data>
+  <data name="Ubi_SelectGame.Text" xml:space="preserve">
+    <value>Selecciona un juego (debes tener el juego en Ubisoft Connect)</value>
+  </data>
+  <data name="WideTile.Text" xml:space="preserve">
+    <value>Tile Ancha</value>
   </data>
 </root>

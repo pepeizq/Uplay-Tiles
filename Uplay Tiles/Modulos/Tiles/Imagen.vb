@@ -12,7 +12,7 @@ Namespace Tiles
             Dim ficheroImagen As StorageFile = Await carpetaInstalacion.CreateFileAsync(clave, CreationCollisionOption.ReplaceExisting)
 
             Dim resultado As New RenderTargetBitmap()
-            Await resultado.RenderAsync(gridImagen)
+            Await resultado.RenderAsync(gridImagen, ancho, alto)
 
             Dim buffer As Streams.IBuffer = Await resultado.GetPixelsAsync
             Dim pixeles As Byte() = buffer.ToArray

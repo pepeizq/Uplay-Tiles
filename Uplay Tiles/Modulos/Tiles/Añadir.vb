@@ -14,6 +14,20 @@ Namespace Tiles
             Dim boton As Button = pagina.FindName("botonAñadirTile")
             boton.IsEnabled = False
 
+            Dim spPersonalizacionTilePequeña As StackPanel = pagina.FindName("spPersonalizacionTilePequeña")
+            spPersonalizacionTilePequeña.Visibility = Visibility.Visible
+
+            Dim spPersonalizacionTileMediana As StackPanel = pagina.FindName("spPersonalizacionTileMediana")
+            spPersonalizacionTileMediana.Visibility = Visibility.Visible
+
+            Dim spPersonalizacionTileAncha As StackPanel = pagina.FindName("spPersonalizacionTileAncha")
+            spPersonalizacionTileAncha.Visibility = Visibility.Visible
+
+            Dim spPersonalizacionTileGrande As StackPanel = pagina.FindName("spPersonalizacionTileGrande")
+            spPersonalizacionTileGrande.Visibility = Visibility.Visible
+
+            '-----------------------
+
             Dim gridTilePequeña As Grid = pagina.FindName("gridTilePequeña")
             Await Imagen.Generar(gridTilePequeña, tile.IDUplay + "pequena.png", 71, 71)
 
@@ -154,6 +168,32 @@ Namespace Tiles
 
             ApplicationData.Current.LocalSettings.Values("tile_ancha_titulo") = False
             ApplicationData.Current.LocalSettings.Values("tile_grande_titulo") = False
+
+            '-----------------------
+
+            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTilePequeña") = 1 Then
+                spPersonalizacionTilePequeña.Visibility = Visibility.Visible
+            Else
+                spPersonalizacionTilePequeña.Visibility = Visibility.Collapsed
+            End If
+
+            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileMediana") = 1 Then
+                spPersonalizacionTileMediana.Visibility = Visibility.Visible
+            Else
+                spPersonalizacionTileMediana.Visibility = Visibility.Collapsed
+            End If
+
+            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileAncha") = 1 Then
+                spPersonalizacionTileAncha.Visibility = Visibility.Visible
+            Else
+                spPersonalizacionTileAncha.Visibility = Visibility.Collapsed
+            End If
+
+            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileGrande") = 1 Then
+                spPersonalizacionTileGrande.Visibility = Visibility.Visible
+            Else
+                spPersonalizacionTileGrande.Visibility = Visibility.Collapsed
+            End If
 
             boton.IsEnabled = True
 
