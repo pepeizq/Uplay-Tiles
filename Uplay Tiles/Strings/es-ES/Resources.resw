@@ -123,14 +123,26 @@
   <data name="BuyApp.Text" xml:space="preserve">
     <value>Comprar App</value>
   </data>
+  <data name="ChangeImage.Text" xml:space="preserve">
+    <value>Cambiar imagen desde</value>
+  </data>
+  <data name="Computer.Text" xml:space="preserve">
+    <value>Ordenador</value>
+  </data>
   <data name="Config" xml:space="preserve">
     <value>Configuración</value>
   </data>
   <data name="Games" xml:space="preserve">
     <value>Juegos</value>
   </data>
+  <data name="ImageAdjustment.Text" xml:space="preserve">
+    <value>Ajuste de imagen</value>
+  </data>
   <data name="LargeTile.Text" xml:space="preserve">
     <value>Tile Grande</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Enlace</value>
   </data>
   <data name="MediumTile.Text" xml:space="preserve">
     <value>Tile Mediana</value>

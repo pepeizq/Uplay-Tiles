@@ -35,25 +35,24 @@ Namespace Tiles
 
         End Sub
 
-        Private Sub CambioImagenInternet(sender As Object, e As TextChangedEventArgs)
+        Public Sub CambioImagenInternet(sender As Object, e As TextChangedEventArgs)
 
-            Dim frame As Frame = Window.Current.Content
-            Dim pagina As Page = frame.Content
+            Dim tb As TextBox = sender
+            tb.IsEnabled = False
 
-            Dim tbImagenInternet As TextBox = pagina.FindName("tbPersonalizacionCambiarImagenInternet")
-            tbImagenInternet.IsEnabled = False
+            Dim imagen As ImageEx = tb.Tag
 
-            If tbImagenInternet.Text.Trim.Length > 0 Then
-                If tbImagenInternet.Text.Trim.Contains("http://") Or tbImagenInternet.Text.Trim.Contains("https://") Then
+            If tb.Text.Trim.Length > 0 Then
+                If tb.Text.Trim.Contains("http://") Or tb.Text.Trim.Contains("https://") Then
                     Try
-                        CambioImagenIncrustar(tbImagenInternet.Text.Trim)
+                        imagen.Source = tb.Text.Trim
                     Catch ex As Exception
 
                     End Try
                 End If
             End If
 
-            tbImagenInternet.IsEnabled = True
+            tb.IsEnabled = True
 
         End Sub
 

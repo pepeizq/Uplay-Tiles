@@ -272,5 +272,35 @@ Namespace Interfaz
 
         End Sub
 
+        Public Sub Entra_Boton_GridIcono(sender As Object, e As PointerRoutedEventArgs)
+
+            Dim boton As Button = sender
+            Dim grid As Grid = boton.Content
+
+            Dim subgrid As Grid = grid.Children(0)
+            subgrid.Saturation(1).Scale(1.02, 1.02, subgrid.ActualWidth / 2, subgrid.ActualHeight / 2).Start()
+
+            Dim icono As FontAwesome5.FontAwesome = grid.Children(1)
+            icono.Saturation(1).Scale(1.2, 1.2, icono.ActualWidth / 2, icono.ActualHeight / 2).Start()
+
+            Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Hand, 1)
+
+        End Sub
+
+        Public Sub Sale_Boton_GridIcono(sender As Object, e As PointerRoutedEventArgs)
+
+            Dim boton As Button = sender
+            Dim grid As Grid = boton.Content
+
+            Dim subgrid As Grid = grid.Children(0)
+            subgrid.Saturation(1).Scale(1, 1, subgrid.ActualWidth / 2, subgrid.ActualHeight / 2).Start()
+
+            Dim icono As FontAwesome5.FontAwesome = grid.Children(1)
+            icono.Saturation(1).Scale(1, 1, icono.ActualWidth / 2, icono.ActualHeight / 2).Start()
+
+            Window.Current.CoreWindow.PointerCursor = New CoreCursor(CoreCursorType.Arrow, 1)
+
+        End Sub
+
     End Module
 End Namespace

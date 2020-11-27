@@ -1,9 +1,12 @@
-﻿Imports Windows.Storage
+﻿Imports Microsoft.Toolkit.Uwp.UI.Controls
+Imports Windows.Storage
 
 Namespace Interfaz
     Module AñadirTile
 
         Public Sub Cargar()
+
+            Dim recursos As New Resources.ResourceLoader()
 
             Dim frame As Frame = Window.Current.Content
             Dim pagina As Page = frame.Content
@@ -42,8 +45,8 @@ Namespace Interfaz
             Dim botonPersonalizacionTilePequeña As Button = pagina.FindName("botonPersonalizacionTilePequeña")
 
             AddHandler botonPersonalizacionTilePequeña.Click, AddressOf PersonalizacionTilePequeñaClick
-            AddHandler botonPersonalizacionTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto_Grid
-            AddHandler botonPersonalizacionTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto_Grid
+            AddHandler botonPersonalizacionTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
+            AddHandler botonPersonalizacionTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
             Dim gridPersonalizacionTilePequeña As Grid = pagina.FindName("gridPersonalizacionTilePequeña")
 
@@ -65,8 +68,8 @@ Namespace Interfaz
             Dim botonPersonalizacionTileMediana As Button = pagina.FindName("botonPersonalizacionTileMediana")
 
             AddHandler botonPersonalizacionTileMediana.Click, AddressOf PersonalizacionTileMedianaClick
-            AddHandler botonPersonalizacionTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto_Grid
-            AddHandler botonPersonalizacionTileMediana.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto_Grid
+            AddHandler botonPersonalizacionTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
+            AddHandler botonPersonalizacionTileMediana.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
             Dim gridPersonalizacionTileMediana As Grid = pagina.FindName("gridPersonalizacionTileMediana")
 
@@ -88,8 +91,8 @@ Namespace Interfaz
             Dim botonPersonalizacionTileAncha As Button = pagina.FindName("botonPersonalizacionTileAncha")
 
             AddHandler botonPersonalizacionTileAncha.Click, AddressOf PersonalizacionTileAnchaClick
-            AddHandler botonPersonalizacionTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto_Grid
-            AddHandler botonPersonalizacionTileAncha.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto_Grid
+            AddHandler botonPersonalizacionTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
+            AddHandler botonPersonalizacionTileAncha.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
             Dim gridPersonalizacionTileAncha As Grid = pagina.FindName("gridPersonalizacionTileAncha")
 
@@ -111,8 +114,8 @@ Namespace Interfaz
             Dim botonPersonalizacionTileGrande As Button = pagina.FindName("botonPersonalizacionTileGrande")
 
             AddHandler botonPersonalizacionTileGrande.Click, AddressOf PersonalizacionTileGrandeClick
-            AddHandler botonPersonalizacionTileGrande.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto_Grid
-            AddHandler botonPersonalizacionTileGrande.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto_Grid
+            AddHandler botonPersonalizacionTileGrande.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
+            AddHandler botonPersonalizacionTileGrande.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
             Dim gridPersonalizacionTileGrande As Grid = pagina.FindName("gridPersonalizacionTileGrande")
 
@@ -129,6 +132,25 @@ Namespace Interfaz
                     iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
                 End If
             End If
+
+            '----------------------------------------------------------------------
+
+            Dim imagenTilePequeña As ImageEx = pagina.FindName("imagenTilePequeña")
+
+            Dim botonCambiarImagenOrdenadorTilePequeña As Button = pagina.FindName("botonCambiarImagenOrdenadorTilePequeña")
+            botonCambiarImagenOrdenadorTilePequeña.Tag = imagenTilePequeña
+
+            AddHandler botonCambiarImagenOrdenadorTilePequeña.Click, AddressOf Tiles.Personalizacion.CambioImagenOrdenador
+            AddHandler botonCambiarImagenOrdenadorTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto
+            AddHandler botonCambiarImagenOrdenadorTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto
+
+            Dim tbCambiarImagenEnlaceTilePequeña As TextBox = pagina.FindName("tbCambiarImagenEnlaceTilePequeña")
+            tbCambiarImagenEnlaceTilePequeña.PlaceholderText = recursos.GetString("Link")
+            tbCambiarImagenEnlaceTilePequeña.Tag = imagenTilePequeña
+
+            AddHandler tbCambiarImagenEnlaceTilePequeña.TextChanged, AddressOf Tiles.Personalizacion.CambioImagenInternet
+            AddHandler tbCambiarImagenEnlaceTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tbCambiarImagenEnlaceTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
 
         End Sub
 
