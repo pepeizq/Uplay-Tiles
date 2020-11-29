@@ -61,7 +61,7 @@
 
                     <ScrollViewer x:Name="svPersonalizacion" Grid.Column="0" VerticalScrollBarVisibility="Auto">
                         <StackPanel Orientation="Vertical" Padding="0,0,30,0">
-                            <Grid Padding="30" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="1">
+                            <Grid Padding="30">
                                 <Grid.Background>
                                     <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
                                 </Grid.Background>
@@ -109,152 +109,240 @@
                                 <TextBlock Grid.Column="1" x:Uid="TrialMessage" Margin="10,0" TextWrapping="Wrap" Foreground="White"/>
                             </Grid>
 
-                            <TextBlock x:Uid="Personalization" Foreground="White" FontSize="18" Margin="10,40,0,10"/>
-                            <StackPanel Orientation="Vertical" Padding="30" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="1">
+                            <TextBlock x:Uid="Personalization" Foreground="White" FontSize="18" Margin="10,40,0,15" HorizontalAlignment="Center"/>
+
+                            <Grid>
+                                <Grid.Background>
+                                    <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.2"/>
+                                </Grid.Background>
+                                
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="3.5*"/>
+                                    <ColumnDefinition Width="3.5*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button x:Name="botonPersonalizacionTilePequeña" Grid.Column="0" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
+                                    <Button.Content>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid x:Name="gridTilePequeña" Grid.Column="0" Background="Transparent" Width="71" Height="71" VerticalAlignment="Top">
+                                                <controls:ImageEx x:Name="imagenTilePequeña" IsCacheEnabled="True" Stretch="None"/>
+                                            </Grid>
+
+                                            <iconos:FontAwesome x:Name="iconoPersonalizacionTilePequeña" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+
+                                <Button x:Name="botonPersonalizacionTileMediana" Grid.Column="1" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
+                                    <Button.Content>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid x:Name="gridTileMediana" Grid.Column="0" Background="Transparent" Width="150" Height="150" VerticalAlignment="Top">
+                                                <controls:ImageEx x:Name="imagenTileMediana" IsCacheEnabled="True"/>
+                                            </Grid>
+
+                                            <iconos:FontAwesome x:Name="iconoPersonalizacionTileMediana" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+
+                                <Button x:Name="botonPersonalizacionTileAncha" Grid.Column="2" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
+                                    <Button.Content>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid x:Name="gridTileAncha" Grid.Column="0" Background="Transparent" Width="310" Height="150" VerticalAlignment="Top">
+                                                <controls:ImageEx x:Name="imagenTileAncha" IsCacheEnabled="True" Stretch="UniformToFill"/>
+                                            </Grid>
+
+                                            <iconos:FontAwesome x:Name="iconoPersonalizacionTileAncha" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+
+                                <Button x:Name="botonPersonalizacionTileGrande" Grid.Column="3" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
+                                    <Button.Content>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Grid x:Name="gridTileGrande" Grid.Column="0" Background="Transparent" Width="310" Height="310" VerticalAlignment="Top">
+                                                <controls:ImageEx x:Name="imagenTileGrande" IsCacheEnabled="True" Stretch="UniformToFill"/>
+                                            </Grid>
+
+                                            <iconos:FontAwesome x:Name="iconoPersonalizacionTileGrande" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+                            </Grid>
+                            
+                            <StackPanel Orientation="Vertical" Padding="40" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="0">
                                 <StackPanel.Background>
                                     <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
                                 </StackPanel.Background>
 
-                                <Grid>
+                                <Grid x:Name="gridPersonalizacionTilePequeña">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="1.5*"/>
-                                        <ColumnDefinition Width="2*"/>
-                                        <ColumnDefinition Width="3.5*"/>
-                                        <ColumnDefinition Width="3.5*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Button x:Name="botonPersonalizacionTilePequeña" Grid.Column="0" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="15,12" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
-                                        <Button.Content>
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <Grid x:Name="gridTilePequeña" Grid.Column="0" Background="{StaticResource ColorTerciario}" Width="71" Height="71" VerticalAlignment="Top">
-                                                    <controls:ImageEx x:Name="imagenTilePequeña" IsCacheEnabled="True" Stretch="None"/>
-                                                </Grid>
-
-                                                <iconos:FontAwesome x:Name="iconoPersonalizacionTilePequeña" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
-                                            </Grid>
-                                        </Button.Content>
-                                    </Button>
-
-                                    <Button x:Name="botonPersonalizacionTileMediana" Grid.Column="1" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="15,12" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
-                                        <Button.Content>
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <Grid x:Name="gridTileMediana" Grid.Column="0" Background="{StaticResource BrushTercero}" Width="150" Height="150" VerticalAlignment="Top">
-                                                    <controls:ImageEx x:Name="imagenTileMediana" IsCacheEnabled="True"/>
-                                                </Grid>
-
-                                                <iconos:FontAwesome x:Name="iconoPersonalizacionTileMediana" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
-                                            </Grid>
-                                        </Button.Content>
-                                    </Button>
-
-                                    <Button x:Name="botonPersonalizacionTileAncha" Grid.Column="2" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="15,12" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
-                                        <Button.Content>
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <Grid x:Name="gridTileAncha" Grid.Column="0" Background="{StaticResource BrushTercero}" Width="310" Height="150" VerticalAlignment="Top">
-                                                    <controls:ImageEx x:Name="imagenTileAncha" IsCacheEnabled="True" Stretch="UniformToFill"/>
-                                                </Grid>
-
-                                                <iconos:FontAwesome x:Name="iconoPersonalizacionTileAncha" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
-                                            </Grid>
-                                        </Button.Content>
-                                    </Button>
-
-                                    <Button x:Name="botonPersonalizacionTileGrande" Grid.Column="3" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="15,12" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
-                                        <Button.Content>
-                                            <Grid>
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <Grid x:Name="gridTileGrande" Grid.Column="0" Background="{StaticResource BrushTercero}" Width="310" Height="310" VerticalAlignment="Top">
-                                                    <controls:ImageEx x:Name="imagenTileGrande" IsCacheEnabled="True" Stretch="UniformToFill"/>
-                                                </Grid>
-                                                
-                                                <iconos:FontAwesome x:Name="iconoPersonalizacionTileGrande" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
-                                            </Grid>
-                                        </Button.Content>
-                                    </Button>
-                                </Grid>
-                                
-                                <Grid x:Name="gridPersonalizacionTilePequeña" Padding="15,30">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
                                     
-                                   
+                                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White"/>
+                                        <Button x:Name="botonCambiarImagenOrdenadorTilePequeña" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                                <TextBlock x:Uid="ChangeImageComputerSearch" Foreground="White"/>
+                                            </StackPanel>
+                                        </Button>
 
-                                    <StackPanel Grid.Column="2" Orientation="Vertical">
-                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                                            <TextBlock x:Uid="ChangeImage" Foreground="White" VerticalAlignment="Center"/>
+                                        <TextBlock x:Uid="ChangeImageLink" Margin="0,30,0,0" Foreground="White"/>
+                                        <TextBox x:Name="tbCambiarImagenEnlaceTilePequeña" Margin="0,15,0,0" RequestedTheme="Dark" MinWidth="400" MaxWidth="800" HorizontalAlignment="Left"/>
 
-                                            <Button x:Name="botonCambiarImagenOrdenadorTilePequeña" Margin="20,0,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
-                                                    <TextBlock x:Uid="Computer" Foreground="White"/>
-                                                </StackPanel>
-                                            </Button>
+                                        <TextBlock x:Uid="ImageAdjustment" Margin="0,30,0,0" Foreground="White"/>
+                                        <ComboBox x:Name="cbCambiarImagenAjusteTilePequeña" Margin="0,15,0,0"/>
 
-                                            <TextBox x:Name="tbCambiarImagenEnlaceTilePequeña" Margin="20,0,0,0" RequestedTheme="Dark" MinWidth="250" MaxWidth="400" VerticalAlignment="Center"/>
+                                        <TextBlock x:Uid="ImageMargin" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenMargenTilePequeña" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="40"/>
+                                            <TextBlock x:Name="tbCambiarImagenMargenTilePequeña" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
                                         </StackPanel>
 
-                                        <StackPanel Orientation="Horizontal" Margin="0,30,0,0" HorizontalAlignment="Right">
-                                            <TextBlock x:Uid="ImageAdjustment" Foreground="White" VerticalAlignment="Center"/>
+                                        <TextBlock x:Uid="ImageCorner" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenEsquinasTilePequeña" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="40"/>
+                                            <TextBlock x:Name="tbCambiarImagenEsquinasTilePequeña" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </StackPanel>
 
-                                            <ComboBox Margin="20,0,0,0"/>
-                                        </StackPanel> 
+                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White" HorizontalAlignment="Right"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTilePequeña" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Right" Width="80"/>
+
+                                        <StackPanel x:Name="spImagenFondoTilePequeña" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White" HorizontalAlignment="Right"/>
+                                            <ColorPicker x:Name="cpImagenFondoTilePequeña" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel>                                    
+                                    </StackPanel> 
+                                </Grid>
+
+                                <Grid x:Name="gridPersonalizacionTileMediana">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White"/>
+                                        <Button x:Name="botonCambiarImagenOrdenadorTileMediana" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                                <TextBlock x:Uid="ChangeImageComputerSearch" Foreground="White"/>
+                                            </StackPanel>
+                                        </Button>
+
+                                        <TextBlock x:Uid="ChangeImageLink" Margin="0,30,0,0" Foreground="White"/>
+                                        <TextBox x:Name="tbCambiarImagenEnlaceTileMediana" Margin="0,15,0,0" RequestedTheme="Dark" MinWidth="400" MaxWidth="800" HorizontalAlignment="Left"/>
+
+                                        <TextBlock x:Uid="ImageAdjustment" Margin="0,30,0,0" Foreground="White"/>
+                                        <ComboBox x:Name="cbCambiarImagenAjusteTileMediana" Margin="0,15,0,0"/>
+
+                                        <TextBlock x:Uid="ImageMargin" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenMargenTileMediana" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
+                                            <TextBlock x:Name="tbCambiarImagenMargenTileMediana" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageCorner" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenEsquinasTileMediana" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
+                                            <TextBlock x:Name="tbCambiarImagenEsquinasTileMediana" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White" HorizontalAlignment="Right"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileMediana" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Right" Width="80"/>
+
+                                        <StackPanel x:Name="spImagenFondoTileMediana" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White" HorizontalAlignment="Right"/>
+                                            <ColorPicker x:Name="cpImagenFondoTileMediana" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel>
                                     </StackPanel>
                                 </Grid>
 
-                                
-                                <Grid x:Name="gridPersonalizacionTileMediana" Padding="15,30">
+                                <Grid x:Name="gridPersonalizacionTileAncha">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                   
-                                </Grid>
+                                    <StackPanel Grid.Column="0" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White"/>
+                                        <Button x:Name="botonCambiarImagenOrdenadorTileAncha" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                                <TextBlock x:Uid="ChangeImageComputerSearch" Foreground="White"/>
+                                            </StackPanel>
+                                        </Button>
 
+                                        <TextBlock x:Uid="ChangeImageLink" Margin="0,30,0,0" Foreground="White"/>
+                                        <TextBox x:Name="tbCambiarImagenEnlaceTileAncha" Margin="0,15,0,0" RequestedTheme="Dark" MinWidth="400" MaxWidth="800" HorizontalAlignment="Left"/>
+
+                                        <TextBlock x:Uid="ImageAdjustment" Margin="0,30,0,0" Foreground="White"/>
+                                        <ComboBox x:Name="cbCambiarImagenAjusteTileAncha" Margin="0,15,0,0"/>
+
+                                        <TextBlock x:Uid="ImageMargin" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenMargenTileAncha" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
+                                            <TextBlock x:Name="tbCambiarImagenMargenTileAncha" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageCorner" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenEsquinasTileAncha" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
+                                            <TextBlock x:Name="tbCambiarImagenEsquinasTileAncha" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageTitle" Margin="0,30,0,0" Foreground="White"/>
+                                        <ToggleSwitch x:Name="tsImagenTituloTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White" HorizontalAlignment="Right"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"  HorizontalAlignment="Right" Width="80"/>
+
+                                        <StackPanel x:Name="spImagenFondoTileAncha" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White" HorizontalAlignment="Right"/>
+                                            <ColorPicker x:Name="cpImagenFondoTileAncha" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
                                
-                                <Grid x:Name="gridPersonalizacionTileAncha" Padding="15,30">
+                                <Grid x:Name="gridPersonalizacionTileGrande">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-
-                                   
-                                </Grid>
-
-                                
-                                <Grid x:Name="gridPersonalizacionTileGrande" Padding="15,30">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
                                         <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
                                     

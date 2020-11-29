@@ -1,5 +1,6 @@
-﻿Imports Microsoft.Toolkit.Uwp.UI.Controls
-Imports Windows.Storage
+﻿Imports Microsoft.Toolkit.Uwp
+Imports Microsoft.Toolkit.Uwp.UI.Controls
+Imports Windows.UI
 
 Namespace Interfaz
     Module AñadirTile
@@ -41,100 +42,37 @@ Namespace Interfaz
 
             '----------------------------------------------------------------------
 
-            Dim iconoPersonalizacionTilePequeña As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTilePequeña")
             Dim botonPersonalizacionTilePequeña As Button = pagina.FindName("botonPersonalizacionTilePequeña")
 
             AddHandler botonPersonalizacionTilePequeña.Click, AddressOf PersonalizacionTilePequeñaClick
             AddHandler botonPersonalizacionTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
             AddHandler botonPersonalizacionTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
-            Dim gridPersonalizacionTilePequeña As Grid = pagina.FindName("gridPersonalizacionTilePequeña")
-
-            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTilePequeña") = Nothing Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTilePequeña") = 0
-                gridPersonalizacionTilePequeña.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTilePequeña.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                If ApplicationData.Current.LocalSettings.Values("PersonalizacionTilePequeña") = 1 Then
-                    gridPersonalizacionTilePequeña.Visibility = Visibility.Visible
-                    iconoPersonalizacionTilePequeña.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-                Else
-                    gridPersonalizacionTilePequeña.Visibility = Visibility.Collapsed
-                    iconoPersonalizacionTilePequeña.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-                End If
-            End If
-
-            Dim iconoPersonalizacionTileMediana As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileMediana")
             Dim botonPersonalizacionTileMediana As Button = pagina.FindName("botonPersonalizacionTileMediana")
 
             AddHandler botonPersonalizacionTileMediana.Click, AddressOf PersonalizacionTileMedianaClick
             AddHandler botonPersonalizacionTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
             AddHandler botonPersonalizacionTileMediana.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
-            Dim gridPersonalizacionTileMediana As Grid = pagina.FindName("gridPersonalizacionTileMediana")
-
-            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileMediana") = Nothing Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileMediana") = 0
-                gridPersonalizacionTileMediana.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTileMediana.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileMediana") = 1 Then
-                    gridPersonalizacionTileMediana.Visibility = Visibility.Visible
-                    iconoPersonalizacionTileMediana.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-                Else
-                    gridPersonalizacionTileMediana.Visibility = Visibility.Collapsed
-                    iconoPersonalizacionTileMediana.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-                End If
-            End If
-
-            Dim iconoPersonalizacionTileAncha As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileAncha")
             Dim botonPersonalizacionTileAncha As Button = pagina.FindName("botonPersonalizacionTileAncha")
 
             AddHandler botonPersonalizacionTileAncha.Click, AddressOf PersonalizacionTileAnchaClick
             AddHandler botonPersonalizacionTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
             AddHandler botonPersonalizacionTileAncha.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
+            Dim iconoPersonalizacionTileAncha As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileAncha")
             Dim gridPersonalizacionTileAncha As Grid = pagina.FindName("gridPersonalizacionTileAncha")
+            PestañasPersonalizacion(iconoPersonalizacionTileAncha, botonPersonalizacionTileAncha, gridPersonalizacionTileAncha)
 
-            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileAncha") = Nothing Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileAncha") = 1
-                gridPersonalizacionTileAncha.Visibility = Visibility.Visible
-                iconoPersonalizacionTileAncha.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-            Else
-                If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileAncha") = 1 Then
-                    gridPersonalizacionTileAncha.Visibility = Visibility.Visible
-                    iconoPersonalizacionTileAncha.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-                Else
-                    gridPersonalizacionTileAncha.Visibility = Visibility.Collapsed
-                    iconoPersonalizacionTileAncha.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-                End If
-            End If
-
-            Dim iconoPersonalizacionTileGrande As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileGrande")
             Dim botonPersonalizacionTileGrande As Button = pagina.FindName("botonPersonalizacionTileGrande")
 
             AddHandler botonPersonalizacionTileGrande.Click, AddressOf PersonalizacionTileGrandeClick
             AddHandler botonPersonalizacionTileGrande.PointerEntered, AddressOf EfectosHover.Entra_Boton_GridIcono
             AddHandler botonPersonalizacionTileGrande.PointerExited, AddressOf EfectosHover.Sale_Boton_GridIcono
 
-            Dim gridPersonalizacionTileGrande As Grid = pagina.FindName("gridPersonalizacionTileGrande")
-
-            If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileGrande") = Nothing Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileGrande") = 0
-                gridPersonalizacionTileGrande.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                If ApplicationData.Current.LocalSettings.Values("PersonalizacionTileGrande") = 1 Then
-                    gridPersonalizacionTileGrande.Visibility = Visibility.Visible
-                    iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-                Else
-                    gridPersonalizacionTileGrande.Visibility = Visibility.Collapsed
-                    iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-                End If
-            End If
-
             '----------------------------------------------------------------------
 
+            Dim gridTilePequeña As Grid = pagina.FindName("gridTilePequeña")
             Dim imagenTilePequeña As ImageEx = pagina.FindName("imagenTilePequeña")
 
             Dim botonCambiarImagenOrdenadorTilePequeña As Button = pagina.FindName("botonCambiarImagenOrdenadorTilePequeña")
@@ -145,12 +83,242 @@ Namespace Interfaz
             AddHandler botonCambiarImagenOrdenadorTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto
 
             Dim tbCambiarImagenEnlaceTilePequeña As TextBox = pagina.FindName("tbCambiarImagenEnlaceTilePequeña")
-            tbCambiarImagenEnlaceTilePequeña.PlaceholderText = recursos.GetString("Link")
+            tbCambiarImagenEnlaceTilePequeña.PlaceholderText = recursos.GetString("ChangeImageLinkInfo")
             tbCambiarImagenEnlaceTilePequeña.Tag = imagenTilePequeña
 
             AddHandler tbCambiarImagenEnlaceTilePequeña.TextChanged, AddressOf Tiles.Personalizacion.CambioImagenInternet
             AddHandler tbCambiarImagenEnlaceTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
             AddHandler tbCambiarImagenEnlaceTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim cbCambiarImagenAjusteTilePequeña As ComboBox = pagina.FindName("cbCambiarImagenAjusteTilePequeña")
+            cbCambiarImagenAjusteTilePequeña.Tag = imagenTilePequeña
+            cbCambiarImagenAjusteTilePequeña.Items.Add(recursos.GetString("ImageAdjustmentNone"))
+            cbCambiarImagenAjusteTilePequeña.Items.Add(recursos.GetString("ImageAdjustmentFill"))
+            cbCambiarImagenAjusteTilePequeña.Items.Add(recursos.GetString("ImageAdjustmentUniform"))
+            cbCambiarImagenAjusteTilePequeña.Items.Add(recursos.GetString("ImageAdjustmentUniformFill"))
+
+            AddHandler cbCambiarImagenAjusteTilePequeña.SelectionChanged, AddressOf Tiles.Personalizacion.CambiarImagenEstiramiento
+            AddHandler cbCambiarImagenAjusteTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler cbCambiarImagenAjusteTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim sliderCambiarImagenMargenTilePequeña As Slider = pagina.FindName("sliderCambiarImagenMargenTilePequeña")
+            sliderCambiarImagenMargenTilePequeña.Tag = imagenTilePequeña
+
+            AddHandler sliderCambiarImagenMargenTilePequeña.ValueChanged, AddressOf Tiles.Personalizacion.CambiarImagenMargen
+            AddHandler sliderCambiarImagenMargenTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler sliderCambiarImagenMargenTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim sliderCambiarImagenEsquinasTilePequeña As Slider = pagina.FindName("sliderCambiarImagenEsquinasTilePequeña")
+            sliderCambiarImagenEsquinasTilePequeña.Tag = imagenTilePequeña
+
+            AddHandler sliderCambiarImagenEsquinasTilePequeña.ValueChanged, AddressOf Tiles.Personalizacion.CambiarImagenEsquinas
+            AddHandler sliderCambiarImagenEsquinasTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler sliderCambiarImagenEsquinasTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim tsImagenTransparenciaTilePequeña As ToggleSwitch = pagina.FindName("tsImagenTransparenciaTilePequeña")
+            tsImagenTransparenciaTilePequeña.Tag = gridTilePequeña
+            tsImagenTransparenciaTilePequeña.OnContent = recursos.GetString("Yes")
+            tsImagenTransparenciaTilePequeña.OffContent = recursos.GetString("No")
+
+            AddHandler tsImagenTransparenciaTilePequeña.Toggled, AddressOf Tiles.Personalizacion.CambiarFondoTransparente
+            AddHandler tsImagenTransparenciaTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tsImagenTransparenciaTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim cpImagenFondoTilePequeña As ColorPicker = pagina.FindName("cpImagenFondoTilePequeña")
+            cpImagenFondoTilePequeña.Tag = gridTilePequeña
+
+            AddHandler cpImagenFondoTilePequeña.ColorChanged, AddressOf Tiles.Personalizacion.CambiarFondoColor
+            AddHandler cpImagenFondoTilePequeña.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler cpImagenFondoTilePequeña.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            '----------------------------------------------------------------------
+
+            Dim gridTileMediana As Grid = pagina.FindName("gridTileMediana")
+            Dim imagenTileMediana As ImageEx = pagina.FindName("imagenTileMediana")
+
+            Dim botonCambiarImagenOrdenadorTileMediana As Button = pagina.FindName("botonCambiarImagenOrdenadorTileMediana")
+            botonCambiarImagenOrdenadorTileMediana.Tag = imagenTileMediana
+
+            AddHandler botonCambiarImagenOrdenadorTileMediana.Click, AddressOf Tiles.Personalizacion.CambioImagenOrdenador
+            AddHandler botonCambiarImagenOrdenadorTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto
+            AddHandler botonCambiarImagenOrdenadorTileMediana.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto
+
+            Dim tbCambiarImagenEnlaceTileMediana As TextBox = pagina.FindName("tbCambiarImagenEnlaceTileMediana")
+            tbCambiarImagenEnlaceTileMediana.PlaceholderText = recursos.GetString("ChangeImageLinkInfo")
+            tbCambiarImagenEnlaceTileMediana.Tag = imagenTileMediana
+
+            AddHandler tbCambiarImagenEnlaceTileMediana.TextChanged, AddressOf Tiles.Personalizacion.CambioImagenInternet
+            AddHandler tbCambiarImagenEnlaceTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tbCambiarImagenEnlaceTileMediana.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim cbCambiarImagenAjusteTileMediana As ComboBox = pagina.FindName("cbCambiarImagenAjusteTileMediana")
+            cbCambiarImagenAjusteTileMediana.Tag = imagenTileMediana
+            cbCambiarImagenAjusteTileMediana.Items.Add(recursos.GetString("ImageAdjustmentNone"))
+            cbCambiarImagenAjusteTileMediana.Items.Add(recursos.GetString("ImageAdjustmentFill"))
+            cbCambiarImagenAjusteTileMediana.Items.Add(recursos.GetString("ImageAdjustmentUniform"))
+            cbCambiarImagenAjusteTileMediana.Items.Add(recursos.GetString("ImageAdjustmentUniformFill"))
+
+            AddHandler cbCambiarImagenAjusteTileMediana.SelectionChanged, AddressOf Tiles.Personalizacion.CambiarImagenEstiramiento
+            AddHandler cbCambiarImagenAjusteTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler cbCambiarImagenAjusteTileMediana.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim sliderCambiarImagenMargenTileMediana As Slider = pagina.FindName("sliderCambiarImagenMargenTileMediana")
+            sliderCambiarImagenMargenTileMediana.Tag = imagenTileMediana
+
+            AddHandler sliderCambiarImagenMargenTileMediana.ValueChanged, AddressOf Tiles.Personalizacion.CambiarImagenMargen
+            AddHandler sliderCambiarImagenMargenTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler sliderCambiarImagenMargenTileMediana.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim sliderCambiarImagenEsquinasTileMediana As Slider = pagina.FindName("sliderCambiarImagenEsquinasTileMediana")
+            sliderCambiarImagenEsquinasTileMediana.Tag = imagenTileMediana
+
+            AddHandler sliderCambiarImagenEsquinasTileMediana.ValueChanged, AddressOf Tiles.Personalizacion.CambiarImagenEsquinas
+            AddHandler sliderCambiarImagenEsquinasTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler sliderCambiarImagenEsquinasTileMediana.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim tsImagenTransparenciaTileMediana As ToggleSwitch = pagina.FindName("tsImagenTransparenciaTileMediana")
+            tsImagenTransparenciaTileMediana.Tag = gridTileMediana
+            tsImagenTransparenciaTileMediana.OnContent = recursos.GetString("Yes")
+            tsImagenTransparenciaTileMediana.OffContent = recursos.GetString("No")
+
+            AddHandler tsImagenTransparenciaTileMediana.Toggled, AddressOf Tiles.Personalizacion.CambiarFondoTransparente
+            AddHandler tsImagenTransparenciaTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tsImagenTransparenciaTileMediana.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim cpImagenFondoTileMediana As ColorPicker = pagina.FindName("cpImagenFondoTileMediana")
+            cpImagenFondoTileMediana.Tag = gridTileMediana
+
+            AddHandler cpImagenFondoTileMediana.ColorChanged, AddressOf Tiles.Personalizacion.CambiarFondoColor
+            AddHandler cpImagenFondoTileMediana.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler cpImagenFondoTileMediana.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            '----------------------------------------------------------------------
+
+            Dim gridTileAncha As Grid = pagina.FindName("gridTileAncha")
+            Dim imagenTileAncha As ImageEx = pagina.FindName("imagenTileAncha")
+
+            Dim botonCambiarImagenOrdenadorTileAncha As Button = pagina.FindName("botonCambiarImagenOrdenadorTileAncha")
+            botonCambiarImagenOrdenadorTileAncha.Tag = imagenTileAncha
+
+            AddHandler botonCambiarImagenOrdenadorTileAncha.Click, AddressOf Tiles.Personalizacion.CambioImagenOrdenador
+            AddHandler botonCambiarImagenOrdenadorTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Boton_IconoTexto
+            AddHandler botonCambiarImagenOrdenadorTileAncha.PointerExited, AddressOf EfectosHover.Sale_Boton_IconoTexto
+
+            Dim tbCambiarImagenEnlaceTileAncha As TextBox = pagina.FindName("tbCambiarImagenEnlaceTileAncha")
+            tbCambiarImagenEnlaceTileAncha.PlaceholderText = recursos.GetString("ChangeImageLinkInfo")
+            tbCambiarImagenEnlaceTileAncha.Tag = imagenTileAncha
+
+            AddHandler tbCambiarImagenEnlaceTileAncha.TextChanged, AddressOf Tiles.Personalizacion.CambioImagenInternet
+            AddHandler tbCambiarImagenEnlaceTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tbCambiarImagenEnlaceTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim cbCambiarImagenAjusteTileAncha As ComboBox = pagina.FindName("cbCambiarImagenAjusteTileAncha")
+            cbCambiarImagenAjusteTileAncha.Tag = imagenTileAncha
+            cbCambiarImagenAjusteTileAncha.Items.Add(recursos.GetString("ImageAdjustmentNone"))
+            cbCambiarImagenAjusteTileAncha.Items.Add(recursos.GetString("ImageAdjustmentFill"))
+            cbCambiarImagenAjusteTileAncha.Items.Add(recursos.GetString("ImageAdjustmentUniform"))
+            cbCambiarImagenAjusteTileAncha.Items.Add(recursos.GetString("ImageAdjustmentUniformFill"))
+
+            AddHandler cbCambiarImagenAjusteTileAncha.SelectionChanged, AddressOf Tiles.Personalizacion.CambiarImagenEstiramiento
+            AddHandler cbCambiarImagenAjusteTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler cbCambiarImagenAjusteTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim sliderCambiarImagenMargenTileAncha As Slider = pagina.FindName("sliderCambiarImagenMargenTileAncha")
+            sliderCambiarImagenMargenTileAncha.Tag = imagenTileAncha
+
+            AddHandler sliderCambiarImagenMargenTileAncha.ValueChanged, AddressOf Tiles.Personalizacion.CambiarImagenMargen
+            AddHandler sliderCambiarImagenMargenTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler sliderCambiarImagenMargenTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim sliderCambiarImagenEsquinasTileAncha As Slider = pagina.FindName("sliderCambiarImagenEsquinasTileAncha")
+            sliderCambiarImagenEsquinasTileAncha.Tag = imagenTileAncha
+
+            AddHandler sliderCambiarImagenEsquinasTileAncha.ValueChanged, AddressOf Tiles.Personalizacion.CambiarImagenEsquinas
+            AddHandler sliderCambiarImagenEsquinasTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler sliderCambiarImagenEsquinasTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim tsImagenTituloTileAncha As ToggleSwitch = pagina.FindName("tsImagenTituloTileAncha")
+            tsImagenTituloTileAncha.OnContent = recursos.GetString("Yes")
+            tsImagenTituloTileAncha.OffContent = recursos.GetString("No")
+
+            AddHandler tsImagenTituloTileAncha.Toggled, AddressOf Tiles.Personalizacion.MostrarTitulo
+            AddHandler tsImagenTituloTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tsImagenTituloTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim tsImagenTransparenciaTileAncha As ToggleSwitch = pagina.FindName("tsImagenTransparenciaTileAncha")
+            tsImagenTransparenciaTileAncha.Tag = gridTileAncha
+            tsImagenTransparenciaTileAncha.OnContent = recursos.GetString("Yes")
+            tsImagenTransparenciaTileAncha.OffContent = recursos.GetString("No")
+
+            AddHandler tsImagenTransparenciaTileAncha.Toggled, AddressOf Tiles.Personalizacion.CambiarFondoTransparente
+            AddHandler tsImagenTransparenciaTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler tsImagenTransparenciaTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+            Dim cpImagenFondoTileAncha As ColorPicker = pagina.FindName("cpImagenFondoTileAncha")
+            cpImagenFondoTileAncha.Tag = gridTileAncha
+
+            AddHandler cpImagenFondoTileAncha.ColorChanged, AddressOf Tiles.Personalizacion.CambiarFondoColor
+            AddHandler cpImagenFondoTileAncha.PointerEntered, AddressOf EfectosHover.Entra_Basico
+            AddHandler cpImagenFondoTileAncha.PointerExited, AddressOf EfectosHover.Sale_Basico
+
+        End Sub
+
+        Public Sub ResetearValores()
+
+            Dim frame As Frame = Window.Current.Content
+            Dim pagina As Page = frame.Content
+
+            Dim tbCambiarImagenEnlaceTilePequeña As TextBox = pagina.FindName("tbCambiarImagenEnlaceTilePequeña")
+            tbCambiarImagenEnlaceTilePequeña.Text = String.Empty
+
+            Dim cbCambiarImagenAjusteTilePequeña As ComboBox = pagina.FindName("cbCambiarImagenAjusteTilePequeña")
+            cbCambiarImagenAjusteTilePequeña.SelectedIndex = 0
+
+            Dim sliderCambiarImagenMargenTilePequeña As Slider = pagina.FindName("sliderCambiarImagenMargenTilePequeña")
+            sliderCambiarImagenMargenTilePequeña.Value = 0
+
+            Dim sliderCambiarImagenEsquinasTilePequeña As Slider = pagina.FindName("sliderCambiarImagenEsquinasTilePequeña")
+            sliderCambiarImagenEsquinasTilePequeña.Value = 0
+
+            Dim tsImagenTransparenciaTilePequeña As ToggleSwitch = pagina.FindName("tsImagenTransparenciaTilePequeña")
+            tsImagenTransparenciaTilePequeña.IsOn = True
+
+            '----------------------------------------------------------------------
+
+            Dim tbCambiarImagenEnlaceTileMediana As TextBox = pagina.FindName("tbCambiarImagenEnlaceTileMediana")
+            tbCambiarImagenEnlaceTileMediana.Text = String.Empty
+
+            Dim cbCambiarImagenAjusteTileMediana As ComboBox = pagina.FindName("cbCambiarImagenAjusteTileMediana")
+            cbCambiarImagenAjusteTileMediana.SelectedIndex = 2
+
+            Dim sliderCambiarImagenMargenTileMediana As Slider = pagina.FindName("sliderCambiarImagenMargenTileMediana")
+            sliderCambiarImagenMargenTileMediana.Value = 0
+
+            Dim sliderCambiarImagenEsquinasTileMediana As Slider = pagina.FindName("sliderCambiarImagenEsquinasTileMediana")
+            sliderCambiarImagenEsquinasTileMediana.Value = 0
+
+            Dim tsImagenTransparenciaTileMediana As ToggleSwitch = pagina.FindName("tsImagenTransparenciaTileMediana")
+            tsImagenTransparenciaTileMediana.IsOn = True
+
+            '----------------------------------------------------------------------
+
+            Dim tbCambiarImagenEnlaceTileAncha As TextBox = pagina.FindName("tbCambiarImagenEnlaceTileAncha")
+            tbCambiarImagenEnlaceTileAncha.Text = String.Empty
+
+            Dim cbCambiarImagenAjusteTileAncha As ComboBox = pagina.FindName("cbCambiarImagenAjusteTileAncha")
+            cbCambiarImagenAjusteTileAncha.SelectedIndex = 3
+
+            Dim sliderCambiarImagenMargenTileAncha As Slider = pagina.FindName("sliderCambiarImagenMargenTileAncha")
+            sliderCambiarImagenMargenTileAncha.Value = 0
+
+            Dim sliderCambiarImagenEsquinasTileAncha As Slider = pagina.FindName("sliderCambiarImagenEsquinasTileAncha")
+            sliderCambiarImagenEsquinasTileAncha.Value = 0
+
+            Dim tsImagenTituloTileAncha As ToggleSwitch = pagina.FindName("tsImagenTituloTileAncha")
+            tsImagenTituloTileAncha.IsOn = False
+
+            Dim tsImagenTransparenciaTileAncha As ToggleSwitch = pagina.FindName("tsImagenTransparenciaTileAncha")
+            tsImagenTransparenciaTileAncha.IsOn = True
 
         End Sub
 
@@ -213,15 +381,7 @@ Namespace Interfaz
             Dim botonPersonalizacionTilePequeña As Button = pagina.FindName("botonPersonalizacionTilePequeña")
             Dim gridPersonalizacionTilePequeña As Grid = pagina.FindName("gridPersonalizacionTilePequeña")
 
-            If gridPersonalizacionTilePequeña.Visibility = Visibility.Visible Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTilePequeña") = 0
-                gridPersonalizacionTilePequeña.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTilePequeña.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTilePequeña") = 1
-                gridPersonalizacionTilePequeña.Visibility = Visibility.Visible
-                iconoPersonalizacionTilePequeña.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-            End If
+            PestañasPersonalizacion(iconoPersonalizacionTilePequeña, botonPersonalizacionTilePequeña, gridPersonalizacionTilePequeña)
 
         End Sub
 
@@ -234,15 +394,7 @@ Namespace Interfaz
             Dim botonPersonalizacionTileMediana As Button = pagina.FindName("botonPersonalizacionTileMediana")
             Dim gridPersonalizacionTileMediana As Grid = pagina.FindName("gridPersonalizacionTileMediana")
 
-            If gridPersonalizacionTileMediana.Visibility = Visibility.Visible Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileMediana") = 0
-                gridPersonalizacionTileMediana.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTileMediana.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileMediana") = 1
-                gridPersonalizacionTileMediana.Visibility = Visibility.Visible
-                iconoPersonalizacionTileMediana.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-            End If
+            PestañasPersonalizacion(iconoPersonalizacionTileMediana, botonPersonalizacionTileMediana, gridPersonalizacionTileMediana)
 
         End Sub
 
@@ -255,15 +407,7 @@ Namespace Interfaz
             Dim botonPersonalizacionTileAncha As Button = pagina.FindName("botonPersonalizacionTileAncha")
             Dim gridPersonalizacionTileAncha As Grid = pagina.FindName("gridPersonalizacionTileAncha")
 
-            If gridPersonalizacionTileAncha.Visibility = Visibility.Visible Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileAncha") = 0
-                gridPersonalizacionTileAncha.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTileAncha.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileAncha") = 1
-                gridPersonalizacionTileAncha.Visibility = Visibility.Visible
-                iconoPersonalizacionTileAncha.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-            End If
+            PestañasPersonalizacion(iconoPersonalizacionTileAncha, botonPersonalizacionTileAncha, gridPersonalizacionTileAncha)
 
         End Sub
 
@@ -276,15 +420,68 @@ Namespace Interfaz
             Dim botonPersonalizacionTileGrande As Button = pagina.FindName("botonPersonalizacionTileGrande")
             Dim gridPersonalizacionTileGrande As Grid = pagina.FindName("gridPersonalizacionTileGrande")
 
-            If gridPersonalizacionTileGrande.Visibility = Visibility.Visible Then
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileGrande") = 0
-                gridPersonalizacionTileGrande.Visibility = Visibility.Collapsed
-                iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
-            Else
-                ApplicationData.Current.LocalSettings.Values("PersonalizacionTileGrande") = 1
-                gridPersonalizacionTileGrande.Visibility = Visibility.Visible
-                iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
-            End If
+            PestañasPersonalizacion(iconoPersonalizacionTileGrande, botonPersonalizacionTileGrande, gridPersonalizacionTileGrande)
+
+        End Sub
+
+        Private Sub PestañasPersonalizacion(icono As FontAwesome5.FontAwesome, boton As Button, grid As Grid)
+
+            Dim frame As Frame = Window.Current.Content
+            Dim pagina As Page = frame.Content
+
+            Dim iconoPersonalizacionTilePequeña As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTilePequeña")
+            iconoPersonalizacionTilePequeña.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
+
+            Dim botonPersonalizacionTilePequeña As Button = pagina.FindName("botonPersonalizacionTilePequeña")
+            botonPersonalizacionTilePequeña.Background = New SolidColorBrush(Colors.Transparent)
+
+            Dim gridPersonalizacionTilePequeña As Grid = pagina.FindName("gridPersonalizacionTilePequeña")
+            gridPersonalizacionTilePequeña.Visibility = Visibility.Collapsed
+
+            '----------------------------------------------
+
+            Dim iconoPersonalizacionTileMediana As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileMediana")
+            iconoPersonalizacionTileMediana.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
+
+            Dim botonPersonalizacionTileMediana As Button = pagina.FindName("botonPersonalizacionTileMediana")
+            botonPersonalizacionTileMediana.Background = New SolidColorBrush(Colors.Transparent)
+
+            Dim gridPersonalizacionTileMediana As Grid = pagina.FindName("gridPersonalizacionTileMediana")
+            gridPersonalizacionTileMediana.Visibility = Visibility.Collapsed
+
+            '----------------------------------------------
+
+            Dim iconoPersonalizacionTileAncha As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileAncha")
+            iconoPersonalizacionTileAncha.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
+
+            Dim botonPersonalizacionTileAncha As Button = pagina.FindName("botonPersonalizacionTileAncha")
+            botonPersonalizacionTileAncha.Background = New SolidColorBrush(Colors.Transparent)
+
+            Dim gridPersonalizacionTileAncha As Grid = pagina.FindName("gridPersonalizacionTileAncha")
+            gridPersonalizacionTileAncha.Visibility = Visibility.Collapsed
+
+            '----------------------------------------------
+
+            Dim iconoPersonalizacionTileGrande As FontAwesome5.FontAwesome = pagina.FindName("iconoPersonalizacionTileGrande")
+            iconoPersonalizacionTileGrande.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleDown
+
+            Dim botonPersonalizacionTileGrande As Button = pagina.FindName("botonPersonalizacionTileGrande")
+            botonPersonalizacionTileGrande.Background = New SolidColorBrush(Colors.Transparent)
+
+            Dim gridPersonalizacionTileGrande As Grid = pagina.FindName("gridPersonalizacionTileGrande")
+            gridPersonalizacionTileGrande.Visibility = Visibility.Collapsed
+
+            '----------------------------------------------
+
+            icono.Icon = FontAwesome5.EFontAwesomeIcon.Solid_AngleDoubleUp
+
+            Dim colorFondo As New SolidColorBrush With {
+                .Opacity = 0.8,
+                .Color = App.Current.Resources("ColorCuarto")
+            }
+            boton.Background = colorFondo
+
+            grid.Visibility = Visibility.Visible
 
         End Sub
 

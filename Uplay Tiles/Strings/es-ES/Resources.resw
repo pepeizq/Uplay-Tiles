@@ -123,11 +123,17 @@
   <data name="BuyApp.Text" xml:space="preserve">
     <value>Comprar App</value>
   </data>
-  <data name="ChangeImage.Text" xml:space="preserve">
-    <value>Cambiar imagen desde</value>
+  <data name="ChangeImageComputer.Text" xml:space="preserve">
+    <value>Cambia la imagen usando un fichero de tu ordenador (formatos aceptados: .png, .jpg, .jpeg):</value>
   </data>
-  <data name="Computer.Text" xml:space="preserve">
-    <value>Ordenador</value>
+  <data name="ChangeImageComputerSearch.Text" xml:space="preserve">
+    <value>Buscar la imagen</value>
+  </data>
+  <data name="ChangeImageLink.Text" xml:space="preserve">
+    <value>Cambia la imagen usando un enlace directo a una imagen:</value>
+  </data>
+  <data name="ChangeImageLinkInfo" xml:space="preserve">
+    <value>Pon el enlace aquí</value>
   </data>
   <data name="Config" xml:space="preserve">
     <value>Configuración</value>
@@ -136,25 +142,43 @@
     <value>Juegos</value>
   </data>
   <data name="ImageAdjustment.Text" xml:space="preserve">
-    <value>Ajuste de imagen</value>
+    <value>Ajuste de imagen al espacio de la Tile:</value>
   </data>
-  <data name="LargeTile.Text" xml:space="preserve">
-    <value>Tile Grande</value>
+  <data name="ImageAdjustmentFill" xml:space="preserve">
+    <value>Rellenar</value>
   </data>
-  <data name="Link" xml:space="preserve">
-    <value>Enlace</value>
+  <data name="ImageAdjustmentNone" xml:space="preserve">
+    <value>Ninguno</value>
   </data>
-  <data name="MediumTile.Text" xml:space="preserve">
-    <value>Tile Mediana</value>
+  <data name="ImageAdjustmentUniform" xml:space="preserve">
+    <value>Uniforme</value>
+  </data>
+  <data name="ImageAdjustmentUniformFill" xml:space="preserve">
+    <value>Uniforme y Rellenar</value>
+  </data>
+  <data name="ImageBackground.Text" xml:space="preserve">
+    <value>Cambia el color de fondo de la Tile:</value>
+  </data>
+  <data name="ImageCorner.Text" xml:space="preserve">
+    <value>Ajustar el redondeo en las esquinas de la imagen:</value>
+  </data>
+  <data name="ImageMargin.Text" xml:space="preserve">
+    <value>Ajustar el margen entre la imagen y el espacio de la Tile:</value>
+  </data>
+  <data name="ImageTitle.Text" xml:space="preserve">
+    <value>Mostrar el título del juego abajo a la izquierda del espacio de la Tile (no se muestra en la vista previa):</value>
+  </data>
+  <data name="ImageTransparent.Text" xml:space="preserve">
+    <value>Fondo de la Tile transparente:</value>
   </data>
   <data name="MissingGames" xml:space="preserve">
     <value>Juegos que Faltan</value>
   </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
   <data name="Personalization.Text" xml:space="preserve">
     <value>Personalización</value>
-  </data>
-  <data name="SmallTile.Text" xml:space="preserve">
-    <value>Tile Pequeña</value>
   </data>
   <data name="TrialMessage.Text" xml:space="preserve">
     <value>Estás usando la versión de prueba de la aplicación, solo puedes tener activa una Tile.</value>
@@ -162,7 +186,7 @@
   <data name="Ubi_SelectGame.Text" xml:space="preserve">
     <value>Selecciona un juego (debes tener el juego en Ubisoft Connect)</value>
   </data>
-  <data name="WideTile.Text" xml:space="preserve">
-    <value>Tile Ancha</value>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
   </data>
 </root>

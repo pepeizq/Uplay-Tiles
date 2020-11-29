@@ -223,6 +223,7 @@ Module Uplay
     Private Async Sub BotonTile_Click(sender As Object, e As RoutedEventArgs)
 
         Trial.Detectar()
+        Interfaz.AñadirTile.ResetearValores()
 
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
