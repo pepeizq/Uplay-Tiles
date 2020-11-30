@@ -141,9 +141,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Modulos\Cache.vb" />
-    <Compile Include="Modulos\Configuracion.vb" />
     <Compile Include="Modulos\Decompiladores.vb" />
     <Compile Include="Modulos\Interfaz\AñadirTile.vb" />
+    <Compile Include="Modulos\Interfaz\Busqueda.vb" />
     <Compile Include="Modulos\Interfaz\EfectosHover.vb" />
     <Compile Include="Modulos\Interfaz\JuegosFaltan.vb" />
     <Compile Include="Modulos\Interfaz\NavigationViewItems.vb" />
@@ -310,6 +310,7 @@
     <Content Include="Assets\Juegos\625_grande.png" />
     <Content Include="Assets\Juegos\659_grande.png" />
     <Content Include="Assets\Juegos\664_grande.png" />
+    <Content Include="Assets\Juegos\693_grande.png" />
     <Content Include="Assets\Juegos\698_grande.png" />
     <Content Include="Assets\Juegos\701_grande.png" />
     <Content Include="Assets\Juegos\78_grande.png" />

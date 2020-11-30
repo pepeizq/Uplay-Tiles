@@ -276,6 +276,12 @@
   <data name="Personalization.Text" xml:space="preserve">
     <value>Personalization</value>
   </data>
+  <data name="SearchGame" xml:space="preserve">
+    <value>Search for a game</value>
+  </data>
+  <data name="StoreVideo" xml:space="preserve">
+    <value>How to use the app</value>
+  </data>
   <data name="TopLeft" xml:space="preserve">
     <value>Top Left</value>
   </data>
@@ -292,7 +298,7 @@
     <value>Select a game (you must have the game on Ubisoft Connect)</value>
   </data>
   <data name="Ubi_StoreDescription" xml:space="preserve">
-    <value>Add Tiles from your Ubisoft Connect games to the Windows 10 Start Menu</value>
+    <value>Add Tiles from your Ubisoft Connect games to the Windows 10 Start Menu.</value>
   </data>
   <data name="Ubi_StoreTags" xml:space="preserve">
     <value>Ubisoft,Uplay,Connect,Assassin's Creed,Far Cry,Watch Dogs,Anno,The Division,</value>

@@ -150,14 +150,10 @@ Module Cache
         Dim frame As Frame = Window.Current.Content
         Dim pagina As Page = frame.Content
 
-        Dim boton As Button = pagina.FindName("botonConfigLimpiarCache")
-        boton.IsEnabled = False
+        Estado(False)
 
         Dim pr As ProgressRing = pagina.FindName("prConfigLimpiarCache")
         pr.Visibility = Visibility.Visible
-
-        Dim gridSeleccionarJuego As Grid = pagina.FindName("gridSeleccionarJuego")
-        gridSeleccionarJuego.Visibility = Visibility.Collapsed
 
         If File.Exists(ApplicationData.Current.LocalFolder.Path + "\juegos") Then
             File.Delete(ApplicationData.Current.LocalFolder.Path + "\juegos")

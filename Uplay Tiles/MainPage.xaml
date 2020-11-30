@@ -90,7 +90,7 @@
                                     </StackPanel>
                                 </Button>
 
-                                <Button x:Name="botonComprarApp" Grid.Column="3" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0">
+                                <Button x:Name="botonComprarApp" Grid.Column="3" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0" Visibility="Collapsed">
                                     <TextBlock x:Uid="BuyApp" Foreground="White"/>
                                 </Button>
                             </Grid>
@@ -471,8 +471,8 @@
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
                     
-                    <ProgressBar x:Name="pbProgreso" Width="200" Foreground="White"/>
-                    <TextBlock x:Name="tbProgreso" Margin="25,0,0,0" VerticalAlignment="Center" Foreground="White"/>
+                    <ProgressBar x:Name="pbProgreso" Grid.Column="0" Width="200" Foreground="White"/>
+                    <TextBlock x:Name="tbProgreso" Grid.Column="1" Margin="25,0,0,0" VerticalAlignment="Center" Foreground="White"/>
                 </Grid>
 
                 <Grid x:Name="gridConfig" Visibility="Collapsed">
