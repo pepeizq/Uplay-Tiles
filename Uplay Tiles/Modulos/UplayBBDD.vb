@@ -74,6 +74,7 @@
             New UplayBBDDEntrada("Might & Magic X Legacy", "401", "238750", Nothing),
             New UplayBBDDEntrada("Monopoly Plus", "3774", "562810", Nothing),
             New UplayBBDDEntrada("Ode", "9797", Nothing, Nothing),
+            New UplayBBDDEntrada("Petz Horsez 2", "693", "15160", Nothing),
             New UplayBBDDEntrada("Prince of Persia: The Forgotten Sands", "11", "33320", Nothing),
             New UplayBBDDEntrada("Prince of Persia: The Sands of Time", "111", "13600", Nothing),
             New UplayBBDDEntrada("Prince of Persia: The Two Thrones", "113", "13530", Nothing),

@@ -1,10 +1,4 @@
 ﻿Imports Microsoft.Toolkit.Uwp.Helpers
-Imports Windows.ApplicationModel.Core
-Imports Windows.Services.Store
-Imports Windows.Storage
-Imports Windows.System
-Imports Windows.UI
-Imports Windows.UI.Core
 
 Public NotInheritable Class MainPage
     Inherits Page
@@ -17,7 +11,7 @@ Public NotInheritable Class MainPage
         nvPrincipal.MenuItems.Add(Interfaz.NavigationViewItems.Generar(recursos.GetString("Config"), FontAwesome5.EFontAwesomeIcon.Solid_Cog))
         nvPrincipal.MenuItems.Add(Interfaz.NavigationViewItems.Generar(recursos.GetString("MissingGames"), FontAwesome5.EFontAwesomeIcon.Solid_Gamepad))
         nvPrincipal.MenuItems.Add(New NavigationViewItemSeparator)
-        'nvPrincipal.MenuItems.Add(MasCosas.Generar("https://github.com/pepeizq/Uplay-Tiles", "https://poeditor.com/join/project/93E4lCQLWI", "https://www.youtube.com/watch?v=bE-DRINSfAs"))
+        nvPrincipal.MenuItems.Add(Interfaz.NavigationViewItems.Generar(recursos.GetString("MoreThings"), FontAwesome5.EFontAwesomeIcon.Solid_Cube))
 
     End Sub
 
@@ -49,7 +43,9 @@ Public NotInheritable Class MainPage
         Cache.Cargar()
         Configuracion.Cargar()
         Interfaz.AñadirTile.Cargar()
+        Interfaz.JuegosFaltan.Cargar()
         Uplay.Generar()
+        MasCosas.Cargar()
 
         Dim recursos As New Resources.ResourceLoader()
         Interfaz.Pestañas.Visibilidad_Pestañas(gridJuegos, recursos.GetString("Games"))
@@ -103,40 +99,5 @@ Public NotInheritable Class MainPage
 
         Return texto
     End Function
-
-    Private Async Sub BotonContactarAñadirJuegos_Click(sender As Object, e As RoutedEventArgs) Handles botonContactarAñadirJuegos.Click
-
-        Await Launcher.LaunchUriAsync(New Uri("https://pepeizqapps.com/contact/"))
-
-    End Sub
-
-    'PERSONALIZACION--------------------------------------------------------------------
-
-    Private Sub ResetearPersonalizacion(tipo As Integer)
-
-        tbPersonalizacionCambiarImagenInternet.Text = String.Empty
-
-        cbPersonalizacionImagenUbicacion.SelectedIndex = 0
-
-        sliderPersonalizacionImagenMargen.Value = 0
-
-        If tipo = 0 Or tipo = 1 Then
-            gridPersonalizacionImagenTitulo.Visibility = Visibility.Collapsed
-        Else
-            cbPersonalizacionImagenTitulo.IsChecked = False
-            cbPersonalizacionImagenTitulo.Tag = tipo
-            gridPersonalizacionImagenTitulo.Visibility = Visibility.Visible
-
-            If tipo = 2 Then
-                ApplicationData.Current.LocalSettings.Values("tile_ancha_titulo") = False
-            ElseIf tipo = 3 Then
-                ApplicationData.Current.LocalSettings.Values("tile_grande_titulo") = False
-            End If
-        End If
-
-        colorPickerPersonalizacionFondo.Color = Microsoft.Toolkit.Uwp.Helpers.ColorHelper.ToColor(Microsoft.Toolkit.Uwp.Helpers.ColorHelper.ToHex(App.Current.Resources("ColorTerciario")))
-        gridPersonalizacionExterior.Background = New SolidColorBrush(colorPickerPersonalizacionFondo.Color)
-
-    End Sub
 
 End Class

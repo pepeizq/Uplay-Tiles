@@ -145,6 +145,7 @@
     <Compile Include="Modulos\Decompiladores.vb" />
     <Compile Include="Modulos\Interfaz\AñadirTile.vb" />
     <Compile Include="Modulos\Interfaz\EfectosHover.vb" />
+    <Compile Include="Modulos\Interfaz\JuegosFaltan.vb" />
     <Compile Include="Modulos\Interfaz\NavigationViewItems.vb" />
     <Compile Include="Modulos\Interfaz\Pestañas.vb" />
     <Compile Include="Modulos\MasCosas.vb" />
@@ -154,7 +155,6 @@
     <Compile Include="Modulos\Tiles\Añadir.vb" />
     <Compile Include="Modulos\Tiles\Imagen.vb" />
     <Compile Include="Modulos\Tiles\Personalizacion.vb" />
-    <Compile Include="Modulos\Tiles\Personalizacion2.vb" />
     <Compile Include="Modulos\Trial.vb" />
     <Compile Include="Modulos\Uplay.vb" />
     <Compile Include="Modulos\UplayBBDD.vb" />
@@ -165,6 +165,11 @@
     <Content Include="Assets\Iconos\1.png" />
     <Content Include="Assets\Iconos\2.png" />
     <Content Include="Assets\Iconos\3.png" />
+    <Content Include="Assets\Iconos\4.png" />
+    <Content Include="Assets\Iconos\5.png" />
+    <Content Include="Assets\Iconos\6.png" />
+    <Content Include="Assets\Iconos\7.png" />
+    <Content Include="Assets\Iconos\8.png" />
     <Content Include="Assets\Juegos\10871_grande.png" />
     <Content Include="Assets\Juegos\108_grande.png" />
     <Content Include="Assets\Juegos\109_grande.png" />

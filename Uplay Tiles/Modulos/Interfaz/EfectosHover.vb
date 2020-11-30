@@ -277,7 +277,8 @@ Namespace Interfaz
             Dim boton As Button = sender
             Dim grid As Grid = boton.Content
 
-            Dim subgrid As Grid = grid.Children(0)
+            Dim sp As StackPanel = grid.Children(0)
+            Dim subgrid As Grid = sp.Children(0)
             subgrid.Saturation(1).Scale(1.02, 1.02, subgrid.ActualWidth / 2, subgrid.ActualHeight / 2).Start()
 
             Dim icono As FontAwesome5.FontAwesome = grid.Children(1)
@@ -292,7 +293,8 @@ Namespace Interfaz
             Dim boton As Button = sender
             Dim grid As Grid = boton.Content
 
-            Dim subgrid As Grid = grid.Children(0)
+            Dim sp As StackPanel = grid.Children(0)
+            Dim subgrid As Grid = sp.Children(0)
             subgrid.Saturation(1).Scale(1, 1, subgrid.ActualWidth / 2, subgrid.ActualHeight / 2).Start()
 
             Dim icono As FontAwesome5.FontAwesome = grid.Children(1)

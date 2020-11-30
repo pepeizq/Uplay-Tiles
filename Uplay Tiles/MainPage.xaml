@@ -123,7 +123,7 @@
                                     <ColumnDefinition Width="3.5*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Button x:Name="botonPersonalizacionTilePequeña" Grid.Column="0" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
+                                <Button x:Name="botonPersonalizacionTilePequeña" Grid.Column="0" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="{StaticResource ColorCuarto}" BorderThickness="1,1,0,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
                                     <Button.Content>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -132,16 +132,20 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <Grid x:Name="gridTilePequeña" Grid.Column="0" Background="Transparent" Width="71" Height="71" VerticalAlignment="Top">
-                                                <controls:ImageEx x:Name="imagenTilePequeña" IsCacheEnabled="True" Stretch="None"/>
-                                            </Grid>
+                                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                                <Grid x:Name="gridTilePequeña" Background="Transparent" Width="71" Height="71" VerticalAlignment="Top">
+                                                    <controls:ImageEx x:Name="imagenTilePequeña" IsCacheEnabled="True" Stretch="None"/>
+                                                </Grid>
 
+                                                <TextBlock Text="71x71" Foreground="White" FontSize="13" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+                                            </StackPanel>
+                                           
                                             <iconos:FontAwesome x:Name="iconoPersonalizacionTilePequeña" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
                                         </Grid>
                                     </Button.Content>
                                 </Button>
 
-                                <Button x:Name="botonPersonalizacionTileMediana" Grid.Column="1" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
+                                <Button x:Name="botonPersonalizacionTileMediana" Grid.Column="1" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="{StaticResource ColorCuarto}" BorderThickness="1,1,1,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
                                     <Button.Content>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -150,16 +154,20 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <Grid x:Name="gridTileMediana" Grid.Column="0" Background="Transparent" Width="150" Height="150" VerticalAlignment="Top">
-                                                <controls:ImageEx x:Name="imagenTileMediana" IsCacheEnabled="True"/>
-                                            </Grid>
+                                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                                <Grid x:Name="gridTileMediana" Background="Transparent" Width="150" Height="150" VerticalAlignment="Top">
+                                                    <controls:ImageEx x:Name="imagenTileMediana" IsCacheEnabled="True"/>
+                                                </Grid>
 
+                                                <TextBlock Text="150x150" Foreground="White" FontSize="13" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+                                            </StackPanel> 
+                                                
                                             <iconos:FontAwesome x:Name="iconoPersonalizacionTileMediana" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
                                         </Grid>
                                     </Button.Content>
                                 </Button>
 
-                                <Button x:Name="botonPersonalizacionTileAncha" Grid.Column="2" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,15,0">
+                                <Button x:Name="botonPersonalizacionTileAncha" Grid.Column="2" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="{StaticResource ColorCuarto}" BorderThickness="0,1,0,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
                                     <Button.Content>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -168,16 +176,20 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <Grid x:Name="gridTileAncha" Grid.Column="0" Background="Transparent" Width="310" Height="150" VerticalAlignment="Top">
-                                                <controls:ImageEx x:Name="imagenTileAncha" IsCacheEnabled="True" Stretch="UniformToFill"/>
-                                            </Grid>
+                                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                                <Grid x:Name="gridTileAncha" Background="Transparent" Width="310" Height="150" VerticalAlignment="Top">
+                                                    <controls:ImageEx x:Name="imagenTileAncha" IsCacheEnabled="True" Stretch="UniformToFill"/>
+                                                </Grid>
+
+                                                <TextBlock Text="310x150" Foreground="White" FontSize="13" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+                                            </StackPanel> 
 
                                             <iconos:FontAwesome x:Name="iconoPersonalizacionTileAncha" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
                                         </Grid>
                                     </Button.Content>
                                 </Button>
 
-                                <Button x:Name="botonPersonalizacionTileGrande" Grid.Column="3" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
+                                <Button x:Name="botonPersonalizacionTileGrande" Grid.Column="3" Style="{ThemeResource ButtonRevealStyle}" Background="Transparent" Padding="20" BorderBrush="{StaticResource ColorCuarto}" BorderThickness="1,1,1,0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalAlignment="Bottom">
                                     <Button.Content>
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -186,9 +198,13 @@
                                                 <ColumnDefinition Width="Auto"/>
                                             </Grid.ColumnDefinitions>
 
-                                            <Grid x:Name="gridTileGrande" Grid.Column="0" Background="Transparent" Width="310" Height="310" VerticalAlignment="Top">
-                                                <controls:ImageEx x:Name="imagenTileGrande" IsCacheEnabled="True" Stretch="UniformToFill"/>
-                                            </Grid>
+                                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                                <Grid x:Name="gridTileGrande" Background="Transparent" Width="310" Height="310" VerticalAlignment="Top">
+                                                    <controls:ImageEx x:Name="imagenTileGrande" IsCacheEnabled="True" Stretch="UniformToFill"/>
+                                                </Grid>
+
+                                                <TextBlock Text="310x310" Foreground="White" FontSize="13" Margin="0,15,0,0" HorizontalAlignment="Center"/>
+                                            </StackPanel>                 
 
                                             <iconos:FontAwesome x:Name="iconoPersonalizacionTileGrande" Grid.Column="2" Foreground="White" FontSize="19" VerticalAlignment="Bottom"/>
                                         </Grid>
@@ -196,7 +212,7 @@
                                 </Button>
                             </Grid>
                             
-                            <StackPanel Orientation="Vertical" Padding="40" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="0">
+                            <StackPanel Orientation="Vertical" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="0">
                                 <StackPanel.Background>
                                     <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
                                 </StackPanel.Background>
@@ -206,9 +222,9 @@
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    
-                                    <StackPanel Grid.Column="0" Orientation="Vertical">
-                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White"/>
+
+                                    <StackPanel Grid.Column="0" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White" TextWrapping="Wrap"/>
                                         <Button x:Name="botonCambiarImagenOrdenadorTilePequeña" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
                                             <StackPanel Orientation="Horizontal">
                                                 <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
@@ -235,13 +251,13 @@
                                         </StackPanel>
                                     </StackPanel>
 
-                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
-                                        <TextBlock x:Uid="ImageTransparent" Foreground="White" HorizontalAlignment="Right"/>
-                                        <ToggleSwitch x:Name="tsImagenTransparenciaTilePequeña" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Right" Width="80"/>
+                                    <StackPanel Grid.Column="1" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTilePequeña" RequestedTheme="Dark" Margin="0,15,0,0"/>
 
                                         <StackPanel x:Name="spImagenFondoTilePequeña" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
-                                            <TextBlock x:Uid="ImageBackground" Foreground="White" HorizontalAlignment="Right"/>
-                                            <ColorPicker x:Name="cpImagenFondoTilePequeña" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White"/>
+                                            <ColorPicker x:Name="cpImagenFondoTilePequeña" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Left"/>
                                         </StackPanel>                                    
                                     </StackPanel> 
                                 </Grid>
@@ -252,8 +268,8 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <StackPanel Grid.Column="0" Orientation="Vertical">
-                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White"/>
+                                    <StackPanel Grid.Column="0" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White" TextWrapping="Wrap"/>
                                         <Button x:Name="botonCambiarImagenOrdenadorTileMediana" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
                                             <StackPanel Orientation="Horizontal">
                                                 <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
@@ -280,13 +296,13 @@
                                         </StackPanel>
                                     </StackPanel>
 
-                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
-                                        <TextBlock x:Uid="ImageTransparent" Foreground="White" HorizontalAlignment="Right"/>
-                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileMediana" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Right" Width="80"/>
+                                    <StackPanel Grid.Column="1" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileMediana" RequestedTheme="Dark" Margin="0,15,0,0"/>
 
                                         <StackPanel x:Name="spImagenFondoTileMediana" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
-                                            <TextBlock x:Uid="ImageBackground" Foreground="White" HorizontalAlignment="Right"/>
-                                            <ColorPicker x:Name="cpImagenFondoTileMediana" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White"/>
+                                            <ColorPicker x:Name="cpImagenFondoTileMediana" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Left"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -297,8 +313,8 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <StackPanel Grid.Column="0" Orientation="Vertical">
-                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White"/>
+                                    <StackPanel Grid.Column="0" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White" TextWrapping="Wrap"/>
                                         <Button x:Name="botonCambiarImagenOrdenadorTileAncha" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
                                             <StackPanel Orientation="Horizontal">
                                                 <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
@@ -323,19 +339,40 @@
                                             <Slider x:Name="sliderCambiarImagenEsquinasTileAncha" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
                                             <TextBlock x:Name="tbCambiarImagenEsquinasTileAncha" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
                                         </StackPanel>
-
-                                        <TextBlock x:Uid="ImageTitle" Margin="0,30,0,0" Foreground="White"/>
-                                        <ToggleSwitch x:Name="tsImagenTituloTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
                                     </StackPanel>
 
-                                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Right">
-                                        <TextBlock x:Uid="ImageTransparent" Foreground="White" HorizontalAlignment="Right"/>
-                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"  HorizontalAlignment="Right" Width="80"/>
+                                    <StackPanel Grid.Column="1" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
 
                                         <StackPanel x:Name="spImagenFondoTileAncha" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
-                                            <TextBlock x:Uid="ImageBackground" Foreground="White" HorizontalAlignment="Right"/>
-                                            <ColorPicker x:Name="cpImagenFondoTileAncha" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White"/>
+                                            <ColorPicker x:Name="cpImagenFondoTileAncha" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Left"/>
                                         </StackPanel>
+
+                                        <TextBlock x:Uid="ImageTitle" Margin="0,30,0,0" Foreground="White" TextWrapping="Wrap"/>
+                                        <ToggleSwitch x:Name="tsImagenTituloTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                        <StackPanel x:Name="spImagenTituloTileAncha" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
+                                            <TextBlock x:Uid="ImageTitleColor" Foreground="White"/>
+                                            <ComboBox x:Name="cbImagenTituloColorTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageIcon" Margin="0,30,0,0" Foreground="White" TextWrapping="Wrap"/>
+                                        <ToggleSwitch x:Name="tsImagenIconoTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                        <StackPanel x:Name="spImagenIconoTileAncha" Orientation="Vertical" Visibility="Collapsed" Margin="0,15,0,0">
+                                            <GridView x:Name="gvImagenIconoTileAncha">
+                                                <GridView.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <ItemsWrapGrid MaximumRowsOrColumns="6" Orientation="Horizontal"/>
+                                                    </ItemsPanelTemplate>
+                                                </GridView.ItemsPanel>
+                                            </GridView>
+
+                                            <TextBlock x:Uid="ImageIconPosition" Margin="0,15,0,0" Foreground="White" TextWrapping="Wrap"/>
+                                            <ComboBox x:Name="cbImagenIconoPosicionTileAncha" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel> 
                                     </StackPanel>
                                 </Grid>
                                
@@ -345,7 +382,67 @@
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
 
-                                    
+                                    <StackPanel Grid.Column="0" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ChangeImageComputer" Foreground="White" TextWrapping="Wrap"/>
+                                        <Button x:Name="botonCambiarImagenOrdenadorTileGrande" Margin="0,15,0,0" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="15,12" BorderThickness="0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <iconos:FontAwesome Icon="Solid_FolderOpen" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                                <TextBlock x:Uid="ChangeImageComputerSearch" Foreground="White"/>
+                                            </StackPanel>
+                                        </Button>
+
+                                        <TextBlock x:Uid="ChangeImageLink" Margin="0,30,0,0" Foreground="White"/>
+                                        <TextBox x:Name="tbCambiarImagenEnlaceTileGrande" Margin="0,15,0,0" RequestedTheme="Dark" MinWidth="400" MaxWidth="800" HorizontalAlignment="Left"/>
+
+                                        <TextBlock x:Uid="ImageAdjustment" Margin="0,30,0,0" Foreground="White"/>
+                                        <ComboBox x:Name="cbCambiarImagenAjusteTileGrande" Margin="0,15,0,0"/>
+
+                                        <TextBlock x:Uid="ImageMargin" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenMargenTileGrande" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
+                                            <TextBlock x:Name="tbCambiarImagenMargenTileGrande" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageCorner" Margin="0,30,0,0" Foreground="White"/>
+                                        <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                            <Slider x:Name="sliderCambiarImagenEsquinasTileGrande" Foreground="White" RequestedTheme="Dark" Width="300" HorizontalAlignment="Left" Maximum="60"/>
+                                            <TextBlock x:Name="tbCambiarImagenEsquinasTileGrande" Text="0px" Foreground="White" Margin="15,0,0,0" VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="1" Padding="40" Orientation="Vertical">
+                                        <TextBlock x:Uid="ImageTransparent" Foreground="White"/>
+                                        <ToggleSwitch x:Name="tsImagenTransparenciaTileGrande" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                        <StackPanel x:Name="spImagenFondoTileGrande" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
+                                            <TextBlock x:Uid="ImageBackground" Foreground="White"/>
+                                            <ColorPicker x:Name="cpImagenFondoTileGrande" IsMoreButtonVisible="True" RequestedTheme="Dark" Margin="0,15,0,0" HorizontalAlignment="Left"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageTitle" Margin="0,30,0,0" Foreground="White" TextWrapping="Wrap"/>
+                                        <ToggleSwitch x:Name="tsImagenTituloTileGrande" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                        <StackPanel x:Name="spImagenTituloTileGrande" Orientation="Vertical" Visibility="Collapsed" Margin="0,30,0,0">
+                                            <TextBlock x:Uid="ImageTitleColor" Foreground="White"/>
+                                            <ComboBox x:Name="cbImagenTituloColorTileGrande" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel>
+
+                                        <TextBlock x:Uid="ImageIcon" Margin="0,30,0,0" Foreground="White" TextWrapping="Wrap"/>
+                                        <ToggleSwitch x:Name="tsImagenIconoTileGrande" RequestedTheme="Dark" Margin="0,15,0,0"/>
+
+                                        <StackPanel x:Name="spImagenIconoTileGrande" Orientation="Vertical" Visibility="Collapsed" Margin="0,15,0,0">
+                                            <GridView x:Name="gvImagenIconoTileGrande">
+                                                <GridView.ItemsPanel>
+                                                    <ItemsPanelTemplate>
+                                                        <ItemsWrapGrid MaximumRowsOrColumns="6" Orientation="Horizontal"/>
+                                                    </ItemsPanelTemplate>
+                                                </GridView.ItemsPanel>
+                                            </GridView>
+
+                                            <TextBlock x:Uid="ImageIconPosition" Margin="0,15,0,0" Foreground="White" TextWrapping="Wrap"/>
+                                            <ComboBox x:Name="cbImagenIconoPosicionTileGrande" RequestedTheme="Dark" Margin="0,15,0,0"/>
+                                        </StackPanel>
+                                    </StackPanel>
                                 </Grid>
                             </StackPanel>
                         </StackPanel>
@@ -378,225 +475,27 @@
                     <TextBlock x:Name="tbProgreso" Margin="25,0,0,0" VerticalAlignment="Center" Foreground="White"/>
                 </Grid>
 
-                <Grid x:Name="gridPersonalizarTiles" Visibility="Collapsed">
-                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" Margin="20">
-                            <Grid.Background>
-                                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                    <GradientStop Color="#aeb0b5" Offset="0.5" />
-                                    <GradientStop Color="#8f9299" Offset="1.0" />
-                                </LinearGradientBrush>
-                            </Grid.Background>
-
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-
-                            <Grid Grid.Row="0" Background="{StaticResource BrushCuarto}">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-
-                                <controls:DropShadowPanel Grid.Column="0" ShadowOpacity="0.9" BlurRadius="5" Margin="20">
-                                    <Button x:Name="botonVolverPersonalizacion" Padding="15,10" Background="{StaticResource BrushSecundario}">
-                                        <StackPanel Orientation="Horizontal">
-                                            <iconos:FontAwesome Icon="Solid_ArrowLeft" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                                            <TextBlock x:Uid="Back" Foreground="White"/>
-                                        </StackPanel>
-                                    </Button>
-                                </controls:DropShadowPanel>
-
-                                <controls:DropShadowPanel Grid.Column="2" ShadowOpacity="0.9" BlurRadius="5" Margin="20">
-                                    <Button x:Name="botonResetearPersonalizacion" Padding="15,10" Background="{StaticResource BrushSecundario}">
-                                        <StackPanel Orientation="Horizontal">
-                                            <TextBlock x:Uid="Reset" Foreground="White"/>
-                                        </StackPanel>
-                                    </Button>
-                                </controls:DropShadowPanel>
-                            </Grid>
-
-                            <Grid Grid.Row="1" Padding="20">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-
-                                <Grid x:Name="gridPersonalizacionExterior" Grid.Column="0" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" VerticalAlignment="Top">
-                                    <Grid x:Name="gridPersonalizacionInterior" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                </Grid>
-
-                                <controls:TabView x:Name="tvPersonalizacion" Grid.Column="1" VerticalAlignment="Top" Margin="20,0,0,0" Background="{StaticResource BrushCuarto}">
-                                    <controls:TabViewItem>
-                                        <controls:TabViewItem.Header>
-                                            <Grid>
-                                                <TextBlock x:Uid="OptionsSource"/>
-                                            </Grid>
-                                        </controls:TabViewItem.Header>
-
-                                        <StackPanel Orientation="Vertical" Padding="20" Width="360">
-                                            <Grid Margin="10">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="*"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <iconos:FontAwesome Grid.Column="0" Icon="Solid_InfoCircle" Foreground="{StaticResource BrushPrimario}"/>
-                                                <TextBlock x:Uid="OptionsSourceInfo" Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center" TextWrapping="Wrap"/>
-                                            </Grid>
-
-                                            <controls:DropShadowPanel ShadowOpacity="0.9" BlurRadius="5" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                <Button x:Name="botonPersonalizacionCambiarImagenOrdenador" Padding="15,10" Background="{StaticResource BrushSecundario}">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <iconos:FontAwesome Icon="Solid_Folder" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                                                        <TextBlock x:Uid="OptionsSourceComputer" Foreground="White"/>
-                                                    </StackPanel>
-                                                </Button>
-                                            </controls:DropShadowPanel>
-
-                                            <StackPanel Orientation="Vertical" Margin="0,10,0,0">
-                                                <TextBlock x:Uid="OptionsSourceInternet" HorizontalAlignment="Center"/>
-                                                <TextBox x:Name="tbPersonalizacionCambiarImagenInternet" Margin="0,10,0,0"/>
-                                            </StackPanel>
-
-                                            <TextBlock x:Uid="OptionsSourceUbication" Margin="0,30,0,10" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-
-                                            <ComboBox x:Name="cbPersonalizacionImagenUbicacion" MaxWidth="300" HorizontalAlignment="Center">
-                                                <ComboBoxItem x:Uid="OptionsSourceUbication1"/>
-                                                <ComboBoxItem x:Uid="OptionsSourceUbication2"/>
-                                            </ComboBox>
-
-                                            <TextBlock x:Uid="OptionsSourceStretch" Margin="0,20,0,10" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap"/>
-
-                                            <ComboBox x:Name="cbPersonalizacionImagenEstiramiento" MaxWidth="300" HorizontalAlignment="Center">
-                                                <ComboBoxItem x:Uid="OptionsSourceStretch1"/>
-                                                <ComboBoxItem x:Uid="OptionsSourceStretch2"/>
-                                                <ComboBoxItem x:Uid="OptionsSourceStretch3"/>
-                                                <ComboBoxItem x:Uid="OptionsSourceStretch4"/>
-                                            </ComboBox>
-                                        </StackPanel>
-                                    </controls:TabViewItem>
-                                    <controls:TabViewItem>
-                                        <controls:TabViewItem.Header>
-                                            <Grid>
-                                                <TextBlock x:Uid="OptionsDetails"/>
-                                            </Grid>
-                                        </controls:TabViewItem.Header>
-
-                                        <StackPanel Orientation="Vertical" Padding="20" Width="360">
-                                            <Grid HorizontalAlignment="Center">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <TextBlock x:Uid="OptionsMargin" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,15,0"/>
-                                                <Slider x:Name="sliderPersonalizacionImagenMargen" Grid.Column="1" Width="180" Minimum="0" Maximum="200"/>
-                                            </Grid>
-
-                                            <Grid x:Name="gridPersonalizacionImagenTitulo" HorizontalAlignment="Center" Margin="0,20,0,0">
-                                                <Grid.ColumnDefinitions>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                    <ColumnDefinition Width="Auto"/>
-                                                </Grid.ColumnDefinitions>
-
-                                                <CheckBox x:Name="cbPersonalizacionImagenTitulo" Grid.Column="0" x:Uid="OptionsTitle" VerticalAlignment="Center"/>
-
-                                                <iconos:FontAwesome Icon="Solid_InfoCircle" Grid.Column="1" Margin="15,0,0,0" Foreground="{StaticResource BrushPrimario}">
-                                                    <ToolTipService.ToolTip>
-                                                        <Grid MaxWidth="300">
-                                                            <TextBlock x:Uid="OptionsTitleInfo" TextWrapping="Wrap" FontSize="15"/>
-                                                        </Grid>
-                                                    </ToolTipService.ToolTip>
-                                                </iconos:FontAwesome>
-                                            </Grid>
-                                        </StackPanel>
-                                    </controls:TabViewItem>
-                                    <controls:TabViewItem>
-                                        <controls:TabViewItem.Header>
-                                            <Grid>
-                                                <TextBlock x:Uid="OptionsBackground"/>
-                                            </Grid>
-                                        </controls:TabViewItem.Header>
-
-                                        <StackPanel Orientation="Vertical" Padding="20" Width="360">
-                                            <ColorPicker x:Name="colorPickerPersonalizacionFondo" IsMoreButtonVisible="True"/>
-                                        </StackPanel>
-                                    </controls:TabViewItem>
-                                    <controls:TabViewItem x:Name="tviPersonalizacionPlataforma">
-                                        <controls:TabViewItem.Header>
-                                            <Grid>
-                                                <TextBlock x:Uid="OptionsPlatform"/>
-                                            </Grid>
-                                        </controls:TabViewItem.Header>
-
-                                        <StackPanel Orientation="Vertical" Padding="20" Width="360">
-                                            <CheckBox x:Name="cbPersonalizacionPlataforma" x:Uid="OptionsPlatformIcon" HorizontalAlignment="Center"/>
-
-                                            <StackPanel x:Name="spPersonalizacionPlataforma" Orientation="Vertical">
-                                                <Grid Margin="0,15,0,0" HorizontalAlignment="Center">
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                        <ColumnDefinition Width="Auto"/>
-                                                    </Grid.ColumnDefinitions>
-
-                                                    <TextBlock x:Uid="OptionsPlatformPosition" Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                                                    <ComboBox x:Name="cbPersonalizacionPlataformaPosicion" Grid.Column="1">
-                                                        <ComboBoxItem x:Uid="OptionsPlatformPosition1"/>
-                                                        <ComboBoxItem x:Uid="OptionsPlatformPosition2"/>
-                                                        <ComboBoxItem x:Uid="OptionsPlatformPosition3"/>
-                                                        <ComboBoxItem x:Uid="OptionsPlatformPosition4"/>
-                                                    </ComboBox>
-                                                </Grid>
-
-                                                <controls:AdaptiveGridView x:Name="gvPersonalizacionPlataformaIconos" Margin="0,20,0,0" HorizontalAlignment="Center"/>
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </controls:TabViewItem>
-                                </controls:TabView>
-                            </Grid>
-                        </Grid>
-                    </ScrollViewer>
-                </Grid>
-
                 <Grid x:Name="gridConfig" Visibility="Collapsed">
                     <ScrollViewer>
-                        <StackPanel Orientation="Vertical" Width="700" Margin="40" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <StackPanel Orientation="Vertical" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1">
-                                <StackPanel.Background>
-                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                                        <GradientStop Color="#aeb0b5" Offset="0.5" />
-                                        <GradientStop Color="#8f9299" Offset="1.0" />
-                                    </LinearGradientBrush>
-                                </StackPanel.Background>
+                        <StackPanel Orientation="Vertical" Padding="40" Margin="20" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="1">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
+                            </StackPanel.Background>
 
-                                <Grid x:Name="gridConfigCache" HorizontalAlignment="Stretch" Padding="20,10">
-                                    <TextBlock Text="Cache" FontSize="16" Foreground="White"/>
-                                </Grid>
+                            <TextBlock x:Uid="ConfigCache" FontSize="17" Foreground="White"/>
+                            <TextBlock x:Uid="ConfigCache2" Foreground="White" TextWrapping="Wrap" Margin="0,20,0,0"/>
+                            <ToggleSwitch x:Name="tsConfigCache" Margin="0,20,0,0" Foreground="White" RequestedTheme="Dark"/>
 
-                                <StackPanel Orientation="Vertical" Padding="20">
-                                    <CheckBox x:Name="cbActivarCache" VerticalAlignment="Top">
-                                        <CheckBox.Content>
-                                            <StackPanel Orientation="Vertical" Margin="5,0,0,0">
-                                                <TextBlock x:Uid="CacheMode" Margin="0,0,0,7"/>
-                                                <TextBlock x:Uid="CacheMode2" TextWrapping="Wrap"/>
-                                            </StackPanel>
-                                        </CheckBox.Content>
-                                    </CheckBox>
-
-                                    <StackPanel x:Name="spCacheOpciones" Orientation="Horizontal" Margin="0,20,0,0">
-                                        <Button x:Name="botonConfigLimpiarCache" Background="{StaticResource BrushSecundario}" Padding="10">
-                                            <StackPanel Orientation="Horizontal">
-                                                <iconos:FontAwesome Icon="Solid_TrashAlt" Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                                                <TextBlock x:Uid="ConfigCleanCache" Foreground="White"/>
-                                            </StackPanel>
-                                        </Button>
-
-                                        <ProgressRing x:Name="prConfigLimpiarCache" Margin="10,0,0,0" IsActive="True" Width="25" Height="25" Foreground="{StaticResource BrushSecundario}" Visibility="Collapsed"/>
+                            <StackPanel x:Name="spConfigCache" Orientation="Horizontal" Margin="0,30,0,0">
+                                <Button x:Name="botonConfigLimpiarCache" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" Padding="18,15" BorderThickness="0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <iconos:FontAwesome Icon="Solid_TrashAlt" Foreground="White" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                                        <TextBlock x:Uid="ConfigCacheClean" Foreground="White"/>
                                     </StackPanel>
-                                </StackPanel>
+                                </Button>
+
+                                <ProgressRing x:Name="prConfigLimpiarCache" Margin="20,0,0,0" IsActive="True" Width="25" Height="25" Foreground="White" Visibility="Collapsed"/>
+                                <TextBlock x:Uid="ConfigCacheMessage" Foreground="White" TextWrapping="Wrap" Margin="30,0,0,0" FontSize="13" VerticalAlignment="Center"/>
                             </StackPanel>
                         </StackPanel> 
                     </ScrollViewer>
@@ -604,23 +503,34 @@
 
                 <Grid x:Name="gridContactarAñadirJuegos" Visibility="Collapsed">
                     <ScrollViewer>
-                        <StackPanel Orientation="Vertical" Width="700" Margin="40" Padding="20" BorderBrush="{StaticResource BrushSecundario}" BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical" Margin="20" BorderBrush="{StaticResource ColorPrimario}" BorderThickness="1">
+                            <StackPanel.Background>
+                                <SolidColorBrush Color="{StaticResource ColorCuarto}" Opacity="0.8"/>
+                            </StackPanel.Background>
+
                             <Grid>
                                 <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.2*"/>
                                     <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Button x:Name="botonContactarAñadirJuegos" Grid.Column="1" Padding="15,10" Background="{StaticResource BrushPrimario}">
-                                    <StackPanel Orientation="Horizontal">
+                                <StackPanel Grid.Column="0" Orientation="Vertical" Padding="40">
+                                    <TextBlock x:Uid="Ubi_MissingGames" Foreground="White" TextWrapping="Wrap"/>
+                                    <TextBlock x:Uid="MissingGames1" Foreground="White" TextWrapping="Wrap" Margin="0,30,0,0"/>
+                                    <TextBlock x:Uid="MissingGames2" Foreground="White" TextWrapping="Wrap" Margin="0,30,0,0"/>
+
+                                    <Button x:Name="botonContactarAñadirJuegos" Margin="0,30,0,0" Padding="18,15" Style="{ThemeResource ButtonRevealStyle}" Background="{StaticResource ColorCuarto}" BorderBrush="Transparent" BorderThickness="0">
                                         <TextBlock x:Uid="Contact" TextWrapping="Wrap" Foreground="White"/>
-                                    </StackPanel>
-                                </Button>
+                                    </Button>
+
+                                    <TextBlock x:Uid="MissingGames3" Foreground="White" TextWrapping="Wrap" Margin="0,30,0,0"/>
+                                    <TextBlock x:Name="tbJuegosFaltanPais" Foreground="White" TextWrapping="Wrap" Margin="0,20,0,0"/>
+                                </StackPanel>
+                                
+                                <StackPanel Grid.Column="1" Orientation="Vertical" Padding="40">
+                                    <controls:ImageEx Source="Assets/añadirjuegos.png" IsCacheEnabled="True" Stretch="Uniform"/>
+                                </StackPanel>                                    
                             </Grid>
-
-                            <TextBlock x:Uid="ContactAddGames" TextWrapping="Wrap" Margin="0,30,0,0"/>
-
-                            <controls:ImageEx Source="Assets/añadirjuegos.png" IsCacheEnabled="True" Stretch="Uniform" Margin="0,30,0,0"/>
                         </StackPanel> 
                     </ScrollViewer>                    
                 </Grid>

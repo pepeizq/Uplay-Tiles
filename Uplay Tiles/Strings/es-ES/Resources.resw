@@ -117,8 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Activated" xml:space="preserve">
+    <value>Activado</value>
+  </data>
   <data name="AddTile.Text" xml:space="preserve">
     <value>Añadir Tile</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Negro</value>
+  </data>
+  <data name="BottomLeft" xml:space="preserve">
+    <value>Abajo Izquierda</value>
+  </data>
+  <data name="BottomRight" xml:space="preserve">
+    <value>Abajo Derecha</value>
   </data>
   <data name="BuyApp.Text" xml:space="preserve">
     <value>Comprar App</value>
@@ -137,6 +149,24 @@
   </data>
   <data name="Config" xml:space="preserve">
     <value>Configuración</value>
+  </data>
+  <data name="ConfigCache.Text" xml:space="preserve">
+    <value>Caché</value>
+  </data>
+  <data name="ConfigCache2.Text" xml:space="preserve">
+    <value>Si activas el modo caché, la aplicación descargara todas las imágenes necesarias para generar Tiles y podrá cargar mejor el listado si tienes cientos de juegos.</value>
+  </data>
+  <data name="ConfigCacheClean.Text" xml:space="preserve">
+    <value>Limpiar Caché</value>
+  </data>
+  <data name="ConfigCacheMessage.Text" xml:space="preserve">
+    <value>Si limpias la caché, automáticamente volverá a descargar las imágenes de los juegos.</value>
+  </data>
+  <data name="Contact.Text" xml:space="preserve">
+    <value>Contactar</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Desactivado</value>
   </data>
   <data name="Games" xml:space="preserve">
     <value>Juegos</value>
@@ -162,11 +192,20 @@
   <data name="ImageCorner.Text" xml:space="preserve">
     <value>Ajustar el redondeo en las esquinas de la imagen:</value>
   </data>
+  <data name="ImageIcon.Text" xml:space="preserve">
+    <value>Añadir un icono de la plataforma a la Tile:</value>
+  </data>
+  <data name="ImageIconPosition.Text" xml:space="preserve">
+    <value>Posición del icono:</value>
+  </data>
   <data name="ImageMargin.Text" xml:space="preserve">
     <value>Ajustar el margen entre la imagen y el espacio de la Tile:</value>
   </data>
   <data name="ImageTitle.Text" xml:space="preserve">
     <value>Mostrar el título del juego abajo a la izquierda del espacio de la Tile (no se muestra en la vista previa):</value>
+  </data>
+  <data name="ImageTitleColor.Text" xml:space="preserve">
+    <value>Elige el color del título:</value>
   </data>
   <data name="ImageTransparent.Text" xml:space="preserve">
     <value>Fondo de la Tile transparente:</value>
@@ -174,17 +213,92 @@
   <data name="MissingGames" xml:space="preserve">
     <value>Juegos que Faltan</value>
   </data>
+  <data name="MissingGames1.Text" xml:space="preserve">
+    <value>Por esta razón necesito vuestra ayuda si veis si falta algún juego o si algún juego ejecuta la versión de una región distinta a la vuestra.</value>
+  </data>
+  <data name="MissingGames2.Text" xml:space="preserve">
+    <value>Antes de contactar conmigo necesito que hagáis un acceso directo del juego en el escritorio y me indicáis la información de la pantalla de la derecha.</value>
+  </data>
+  <data name="MissingGames3.Text" xml:space="preserve">
+    <value>Y también necesito saber el país donde estáis, hay juegos que solo se pueden ejecutar desde determinados países.</value>
+  </data>
+  <data name="MoreThings" xml:space="preserve">
+    <value>Más Cosas</value>
+  </data>
+  <data name="MoreThingsContact" xml:space="preserve">
+    <value>Contactar</value>
+  </data>
+  <data name="MoreThingsHelpTranslate" xml:space="preserve">
+    <value>Ayuda a Traducir</value>
+  </data>
+  <data name="MoreThingsHelpTranslateDescription" xml:space="preserve">
+    <value>Si la aplicación no está en tu idioma, puedes ayudarme a traducirla a tu idioma usando la plataforma Poeditor.</value>
+  </data>
+  <data name="MoreThingsMyTwitterDescription" xml:space="preserve">
+    <value>En mi cuenta de Twitter iré comentando los avances que vaya realizando en mis aplicaciones y juegos, pero también pondré cosas relacionadas con plataformas de videojuegos de PC.</value>
+  </data>
+  <data name="MoreThingsOpen" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="MoreThingspepeizqappsDescription" xml:space="preserve">
+    <value>Si quieres contactar conmigo o ver otras aplicaciones y juegos que he creado, puedes visitar mi web.</value>
+  </data>
+  <data name="MoreThingspepeizqdealsDescription" xml:space="preserve">
+    <value>También he creado una web de ofertas de videojuegos para PC, os animo a visitar la web.</value>
+  </data>
+  <data name="MoreThingsRate" xml:space="preserve">
+    <value>Calificar</value>
+  </data>
+  <data name="MoreThingsRateApp" xml:space="preserve">
+    <value>Calificar la Aplicación</value>
+  </data>
+  <data name="MoreThingsRateAppDescription" xml:space="preserve">
+    <value>Puedes calificar la aplicación con la valoración que tu creas que merezca.</value>
+  </data>
+  <data name="MoreThingsRateAppThanks" xml:space="preserve">
+    <value>Gracias por calificar la app</value>
+  </data>
+  <data name="MoreThingsSourceCode" xml:space="preserve">
+    <value>Código Fuente</value>
+  </data>
+  <data name="MoreThingsSourceCodeDescription" xml:space="preserve">
+    <value>Puedes ver el código fuente de la aplicación en Github, si tienes cuenta puedes ponerle una estrella.</value>
+  </data>
+  <data name="MoreThingsVideo" xml:space="preserve">
+    <value>Vídeo en Youtube</value>
+  </data>
+  <data name="MoreThingsVideoDescription" xml:space="preserve">
+    <value>Por si tienes dudas de como usar la aplicación, he subido un video a Youtube.</value>
+  </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="Personalization.Text" xml:space="preserve">
     <value>Personalización</value>
   </data>
+  <data name="TopLeft" xml:space="preserve">
+    <value>Arriba Izquierda</value>
+  </data>
+  <data name="TopRight" xml:space="preserve">
+    <value>Arriba Derecha</value>
+  </data>
   <data name="TrialMessage.Text" xml:space="preserve">
     <value>Estás usando la versión de prueba de la aplicación, solo puedes tener activa una Tile.</value>
   </data>
+  <data name="Ubi_MissingGames.Text" xml:space="preserve">
+    <value>Por restricciones en la API de Ubisoft Connect, debo integrar sus juegos manualmente en la app.</value>
+  </data>
   <data name="Ubi_SelectGame.Text" xml:space="preserve">
     <value>Selecciona un juego (debes tener el juego en Ubisoft Connect)</value>
+  </data>
+  <data name="Ubi_StoreDescription" xml:space="preserve">
+    <value>Añade Tiles de tus juegos de Ubisoft Connect en el Menu Inicio de Windows 10</value>
+  </data>
+  <data name="Ubi_StoreTags" xml:space="preserve">
+    <value>Ubisoft,Uplay,Connect,Assassin's Creed,Far Cry,Watch Dogs,Anno,The Division,</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>Blanco</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Si</value>

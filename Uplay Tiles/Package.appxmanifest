@@ -44,7 +44,7 @@
             <uap:ShowOn Tile="square310x310Logo"/>
           </uap:ShowNameOnTiles>
         </uap:DefaultTile >
-        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png"  BackgroundColor="#3e7bc2"/>
+        <uap:SplashScreen Image="Assets\Logos\SplashScreen.png" a:Optional="true" xmlns:a="http://schemas.microsoft.com/appx/manifest/uap/windows10/5" BackgroundColor="#3e7bc2"/>
       </uap:VisualElements>
     </Application>
   </Applications>
