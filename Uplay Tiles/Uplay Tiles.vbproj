@@ -146,6 +146,7 @@
     <Compile Include="Modulos\Interfaz\Busqueda.vb" />
     <Compile Include="Modulos\Interfaz\EfectosHover.vb" />
     <Compile Include="Modulos\Interfaz\JuegosFaltan.vb" />
+    <Compile Include="Modulos\Interfaz\MasTiles.vb" />
     <Compile Include="Modulos\Interfaz\NavigationViewItems.vb" />
     <Compile Include="Modulos\Interfaz\Pestañas.vb" />
     <Compile Include="Modulos\MasCosas.vb" />
@@ -183,10 +184,13 @@
     <Content Include="Assets\Juegos\11662_logo.png" />
     <Content Include="Assets\Juegos\11783_ancha.jpg" />
     <Content Include="Assets\Juegos\11783_grande.jpg" />
+    <Content Include="Assets\Juegos\11783_logo.png" />
     <Content Include="Assets\Juegos\11784_ancha.jpg" />
     <Content Include="Assets\Juegos\11784_grande.png" />
+    <Content Include="Assets\Juegos\11784_logo.png" />
     <Content Include="Assets\Juegos\11785_ancha.jpg" />
     <Content Include="Assets\Juegos\11785_grande.png" />
+    <Content Include="Assets\Juegos\11785_logo.png" />
     <Content Include="Assets\Juegos\11903_ancha.png" />
     <Content Include="Assets\Juegos\11903_grande.png" />
     <Content Include="Assets\Juegos\11903_logo.png" />
@@ -203,10 +207,13 @@
     <Content Include="Assets\Juegos\13_icono.jpg" />
     <Content Include="Assets\Juegos\13_logo.png" />
     <Content Include="Assets\Juegos\16234_ancha.png" />
-    <Content Include="Assets\Juegos\16234_grande.png" />
+    <Content Include="Assets\Juegos\16234_grande.jpg" />
     <Content Include="Assets\Juegos\16234_logo.png" />
+    <Content Include="Assets\Juegos\16236_ancha.png" />
+    <Content Include="Assets\Juegos\16236_grande.jpg" />
+    <Content Include="Assets\Juegos\16236_logo.png" />
     <Content Include="Assets\Juegos\16238_ancha.png" />
-    <Content Include="Assets\Juegos\16238_grande.png" />
+    <Content Include="Assets\Juegos\16238_grande.jpg" />
     <Content Include="Assets\Juegos\16238_logo.png" />
     <Content Include="Assets\Juegos\1651_grande.png" />
     <Content Include="Assets\Juegos\1653_grande.png" />
@@ -242,6 +249,9 @@
     <Content Include="Assets\Juegos\2968_grande.png" />
     <Content Include="Assets\Juegos\2968_logo.png" />
     <Content Include="Assets\Juegos\297_grande.png" />
+    <Content Include="Assets\Juegos\2988_ancha.jpg" />
+    <Content Include="Assets\Juegos\2988_grande.png" />
+    <Content Include="Assets\Juegos\2988_logo.png" />
     <Content Include="Assets\Juegos\2990_ancha.png" />
     <Content Include="Assets\Juegos\2990_grande.png" />
     <Content Include="Assets\Juegos\2990_logo.png" />
@@ -250,6 +260,7 @@
     <Content Include="Assets\Juegos\3053_grande.png" />
     <Content Include="Assets\Juegos\3054_ancha.png" />
     <Content Include="Assets\Juegos\3054_grande.png" />
+    <Content Include="Assets\Juegos\3054_logo.png" />
     <Content Include="Assets\Juegos\30_grande.png" />
     <Content Include="Assets\Juegos\3120_grande.jpg" />
     <Content Include="Assets\Juegos\3130_grande.png" />
@@ -300,6 +311,10 @@
     <Content Include="Assets\Juegos\53_grande.png" />
     <Content Include="Assets\Juegos\5404_ancha.png" />
     <Content Include="Assets\Juegos\5404_grande.png" />
+    <Content Include="Assets\Juegos\5404_logo.png" />
+    <Content Include="Assets\Juegos\5405_ancha.png" />
+    <Content Include="Assets\Juegos\5405_grande.png" />
+    <Content Include="Assets\Juegos\5405_logo.png" />
     <Content Include="Assets\Juegos\5595_ancha.png" />
     <Content Include="Assets\Juegos\5595_grande.png" />
     <Content Include="Assets\Juegos\5595_logo.png" />

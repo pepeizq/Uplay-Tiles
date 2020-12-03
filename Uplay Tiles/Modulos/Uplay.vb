@@ -186,7 +186,7 @@ Module Uplay
         Dim imagen As New ImageEx With {
             .Source = juego.ImagenGrande,
             .IsCacheEnabled = True,
-            .Stretch = Stretch.Uniform,
+            .Stretch = Stretch.UniformToFill,
             .Padding = New Thickness(0, 0, 0, 0),
             .HorizontalAlignment = HorizontalAlignment.Center,
             .VerticalAlignment = VerticalAlignment.Center

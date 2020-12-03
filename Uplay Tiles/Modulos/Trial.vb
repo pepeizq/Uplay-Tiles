@@ -5,6 +5,8 @@ Imports Windows.UI.StartScreen
 
 Module Trial
 
+    Public idTienda As String = "9NF9PH08FRSJ"
+
     Public Async Sub Detectar()
 
         Dim config As ApplicationDataContainer = ApplicationData.Current.LocalSettings
@@ -61,7 +63,7 @@ Module Trial
                 Dim usuario As User = usuarios(0)
 
                 Dim contexto As StoreContext = StoreContext.GetForUser(usuario)
-                Await contexto.RequestPurchaseAsync("9NF9PH08FRSJ")
+                Await contexto.RequestPurchaseAsync(idTienda)
             End If
         End If
 
