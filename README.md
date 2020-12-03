@@ -1,14 +1,14 @@
-# Uplay Tiles
+# Tiles for Ubisoft Games
 
 App for Windows 10 written in Visual Basic for Universal Windows Platform (UWP).
 
 ### What does the app do?
 
-Pin Tiles in the Start Menu of Windows 10 for your Uplay games, more information [in my web](https://pepeizqapps.com/app/uplay-tiles/).
+Pin Tiles of your games from the Ubisoft Connect launcher to the Windows 10 Start Menu, more information [in my web](https://pepeizqapps.com/app/uplay-tiles/).
 
 ### Video on Youtube
-https://www.youtube.com/watch?v=bE-DRINSfAs
+https://www.youtube.com/watch?v=WQUWzjh8Bbc
 
-[![Image1](https://i.imgur.com/O6BdeJ9.png)](https://pepeizqapps.com/app/uplay-tiles/)
+[![Image1](https://i.imgur.com/Qdtq0YQ.png)](https://pepeizqapps.com/app/uplay-tiles/)
 
-[![Image2](https://i.imgur.com/R2rHXkk.png)](https://pepeizqapps.com/app/uplay-tiles/)
+[![Image2](https://i.imgur.com/ApZS3HU.png)](https://pepeizqapps.com/app/uplay-tiles/)
