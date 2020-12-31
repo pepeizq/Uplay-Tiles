@@ -72,10 +72,12 @@ Module Uplay
                         If Not api Is Nothing Then
                             If Not api.Resultado = False Then
                                 If Not api.Datos Is Nothing Then
-                                    Dim imagenLogo As String = String.Empty
+                                    Dim imagenPequeña As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "pequeña")
+
+                                    Dim imagenMediana As String = String.Empty
 
                                     Try
-                                        imagenLogo = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/logo.png", juegoBBDD.IDSteam, "logo")
+                                        imagenMediana = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/logo.png", juegoBBDD.IDSteam, "mediana")
                                     Catch ex As Exception
 
                                     End Try
@@ -119,15 +121,15 @@ Module Uplay
                                         End If
                                     End If
 
-                                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, juegoBBDD.IDSteam, enlace, Nothing, imagenLogo, imagenAncha, imagenGrande)
+                                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, juegoBBDD.IDSteam, enlace, imagenPequeña, imagenMediana, imagenAncha, imagenGrande)
                                     listaJuegos.Add(juego)
                                 End If
                             End If
                         End If
                     End If
                 Else
-                    Dim imagenIcono As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "icono")
-                    Dim imagenLogo As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "logo")
+                    Dim imagenPequeña As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "pequeña")
+                    Dim imagenMediana As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "mediana")
                     Dim imagenAncha As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "ancha")
                     Dim imagenGrande As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "grande")
 
@@ -144,7 +146,7 @@ Module Uplay
                         End If
                     End If
 
-                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, Nothing, enlace, imagenIcono, imagenLogo, imagenAncha, imagenGrande)
+                    Dim juego As New Tile(juegoBBDD.Titulo, juegoBBDD.IDUplay, Nothing, enlace, imagenPequeña, imagenMediana, imagenAncha, imagenGrande)
                     listaJuegos.Add(juego)
                 End If
             End If
@@ -287,25 +289,25 @@ Module Uplay
         Dim imagenGrande As ImageEx = pagina.FindName("imagenTileGrande")
         imagenGrande.Source = Nothing
 
-        If juego.ImagenIcono = Nothing Then
+        If juego.ImagenPequeña = Nothing Then
             If Not juego.IDSteam = Nothing Then
                 Try
-                    juego.ImagenIcono = Await Cache.DescargarImagen(Await Steam.SacarIcono(juego.IDSteam), juego.IDSteam, "icono")
+                    juego.ImagenPequeña = Await Cache.DescargarImagen(Await Steam.SacarIcono(juego.IDSteam), juego.IDSteam, "icono")
                 Catch ex As Exception
 
                 End Try
             End If
         End If
 
-        If Not juego.ImagenIcono = Nothing Then
-            imagenPequeña.Source = juego.ImagenIcono
-            imagenPequeña.Tag = juego.ImagenIcono
+        If Not juego.ImagenPequeña = Nothing Then
+            imagenPequeña.Source = juego.ImagenPequeña
+            imagenPequeña.Tag = juego.ImagenPequeña
         End If
 
         If Not juego.ImagenAncha = Nothing Then
-            If Not juego.ImagenLogo = Nothing Then
-                imagenMediana.Source = juego.ImagenLogo
-                imagenMediana.Tag = juego.ImagenLogo
+            If Not juego.ImagenMediana = Nothing Then
+                imagenMediana.Source = juego.ImagenMediana
+                imagenMediana.Tag = juego.ImagenMediana
             Else
                 imagenMediana.Source = juego.ImagenAncha
                 imagenMediana.Tag = juego.ImagenAncha

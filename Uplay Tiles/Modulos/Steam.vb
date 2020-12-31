@@ -11,8 +11,8 @@ Module Steam
 
             For Each juego In listaJuegos
                 If id = juego.IDSteam Then
-                    If Not juego.ImagenIcono = Nothing Then
-                        Return juego.ImagenIcono
+                    If Not juego.ImagenPequeña = Nothing Then
+                        Return juego.ImagenPequeña
                     End If
                 End If
             Next
@@ -69,7 +69,7 @@ Module Steam
 
                 For Each juego In listaJuegos
                     If id = juego.IDSteam Then
-                        juego.ImagenIcono = Await Cache.DescargarImagen(urlIcono, id, "icono")
+                        juego.ImagenPequeña = Await Cache.DescargarImagen(urlIcono, id, "icono")
                     End If
                 Next
 
