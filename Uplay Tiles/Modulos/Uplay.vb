@@ -74,13 +74,15 @@ Module Uplay
                                 If Not api.Datos Is Nothing Then
                                     Dim imagenPequeña As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "pequeña")
 
-                                    Dim imagenMediana As String = String.Empty
+                                    Dim imagenMediana As String = Await Cache.DescargarImagen(Nothing, juegoBBDD.IDUplay, "mediana")
 
-                                    Try
-                                        imagenMediana = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/logo.png", juegoBBDD.IDSteam, "mediana")
-                                    Catch ex As Exception
+                                    If imagenMediana = String.Empty Then
+                                        Try
+                                            imagenMediana = Await Cache.DescargarImagen(dominioImagenes + "/steam/apps/" + juegoBBDD.IDSteam + "/logo.png", juegoBBDD.IDSteam, "mediana")
+                                        Catch ex As Exception
 
-                                    End Try
+                                        End Try
+                                    End If
 
                                     Dim imagenAncha As String = String.Empty
 

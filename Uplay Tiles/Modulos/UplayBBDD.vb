@@ -37,7 +37,7 @@
             New UplayBBDDEntrada("Brothers in Arms: Earned in Blood", "271", "19800", Nothing),
             New UplayBBDDEntrada("Brothers in Arms: Hell's Highway", "272", "15390", Nothing),
             New UplayBBDDEntrada("Brothers in Arms: Road to Hill 30", "270", "15190", Nothing),
-            New UplayBBDDEntrada("Call of Juarez: Bound in Blood", "112", "21980", Nothing),'---Iconos
+            New UplayBBDDEntrada("Call of Juarez: Bound in Blood", "112", "21980", Nothing),
             New UplayBBDDEntrada("Call of Juarez: Gunslinger", "344", "204450", Nothing),
             New UplayBBDDEntrada("Champions of Anteria", "825", "374520", Nothing),
             New UplayBBDDEntrada("Child of Light", "609", "256290", Nothing),
@@ -57,7 +57,7 @@
             New UplayBBDDEntrada("Far Cry New Dawn", "5210", "939960", Nothing),
             New UplayBBDDEntrada("Far Cry Primal", "2010", "371660", Nothing),
             New UplayBBDDEntrada("Flashback", "422", "245730", Nothing),
-            New UplayBBDDEntrada("For Honor", "3458", "304390", Nothing),
+            New UplayBBDDEntrada("For Honor", "3458", "304390", Nothing),'---Iconos
             New UplayBBDDEntrada("From Dust", "30", "33460", Nothing),
             New UplayBBDDEntrada("Grow Home", "1108", "323320", Nothing),
             New UplayBBDDEntrada("Grow Up", "3120", "426790", Nothing),
