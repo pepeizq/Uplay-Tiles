@@ -1,5 +1,7 @@
 ﻿Module UplayBBDD
 
+    'https://github.com/wTonyChen/Uplay-AppID-List/blob/master/UplayAppIDs.json
+
     Public Function Listado()
 
         Dim lista As New List(Of UplayBBDDEntrada) From {
@@ -43,9 +45,11 @@
             New UplayBBDDEntrada("Child of Light", "609", "256290", Nothing),
             New UplayBBDDEntrada("Cloudberry Kingdom", "436", Nothing, Nothing),
             New UplayBBDDEntrada("Cold Fear", "233", "15270", Nothing),
+            New UplayBBDDEntrada("CSI: Hard Evidence", "682", "21730", Nothing),
             New UplayBBDDEntrada("Dark Messiah of Might and Magic", "269", "2100", Nothing),
             New UplayBBDDEntrada("Discovery Tour by Assassin’s Creed: Ancient Egypt", "5100", "775430", Nothing),
             New UplayBBDDEntrada("Discovery Tour by Assassin’s Creed: Ancient Greece", "5404", Nothing, Nothing),
+            New UplayBBDDEntrada("Driv3r", "249", Nothing, Nothing),
             New UplayBBDDEntrada("Driver Parallel Lines", "252", "21780", Nothing),
             New UplayBBDDEntrada("Driver San Francisco", "13", Nothing, Nothing),
             New UplayBBDDEntrada("Far Cry", "84", "13520", Nothing),
@@ -57,10 +61,11 @@
             New UplayBBDDEntrada("Far Cry New Dawn", "5210", "939960", Nothing),
             New UplayBBDDEntrada("Far Cry Primal", "2010", "371660", Nothing),
             New UplayBBDDEntrada("Flashback", "422", "245730", Nothing),
-            New UplayBBDDEntrada("For Honor", "3458", "304390", Nothing),'---Iconos
+            New UplayBBDDEntrada("For Honor", "3458", "304390", Nothing),
             New UplayBBDDEntrada("From Dust", "30", "33460", Nothing),
             New UplayBBDDEntrada("Grow Home", "1108", "323320", Nothing),
             New UplayBBDDEntrada("Grow Up", "3120", "426790", Nothing),
+            New UplayBBDDEntrada("Heroes of Might & Magic", "351", Nothing, Nothing),
             New UplayBBDDEntrada("Heroes of Might & Magic 2", "352", Nothing, Nothing),
             New UplayBBDDEntrada("Heroes of Might & Magic 3 Complete Edition", "353", Nothing, Nothing),
             New UplayBBDDEntrada("Heroes of Might & Magic V", "87", "15170", Nothing),
@@ -76,6 +81,8 @@
             New UplayBBDDEntrada("Might & Magic X Legacy", "401", "238750", Nothing),
             New UplayBBDDEntrada("Monopoly Plus", "3774", "562810", Nothing),
             New UplayBBDDEntrada("Ode", "9797", Nothing, Nothing),
+            New UplayBBDDEntrada("Petz Catz 2", "691", Nothing, Nothing),
+            New UplayBBDDEntrada("Petz Dogz 2", "692", Nothing, Nothing),
             New UplayBBDDEntrada("Petz Horsez 2", "693", "15160", Nothing),
             New UplayBBDDEntrada("Prince of Persia: The Forgotten Sands", "11", "33320", Nothing),
             New UplayBBDDEntrada("Prince of Persia: The Sands of Time", "111", "13600", Nothing),
@@ -104,6 +111,7 @@
             New UplayBBDDEntrada("The Adventures of Tintin: The Game", "33", Nothing, Nothing),
             New UplayBBDDEntrada("The Crew", "413", "241560", New List(Of UplayBBDDPaisID) From {New UplayBBDDPaisID("RU", "507")}),
             New UplayBBDDEntrada("The Crew 2", "2855", "646910", Nothing),
+            New UplayBBDDEntrada("The Expendables 2 Videogame", "346", Nothing, Nothing),
             New UplayBBDDEntrada("The Settlers - History Edition", "11662", Nothing, Nothing),
             New UplayBBDDEntrada("The Settlers 2 - History Edition", "11783", Nothing, Nothing),
             New UplayBBDDEntrada("The Settlers 3 - History Edition", "11784", Nothing, Nothing),
@@ -119,7 +127,7 @@
             New UplayBBDDEntrada("Tom Clancy's Ghost Recon Future Soldier", "53", "212630", Nothing),
             New UplayBBDDEntrada("Tom Clancy's Ghost Recon Wildlands", "1771", "460930", Nothing),
             New UplayBBDDEntrada("Tom Clancy's H.A.W.X. 2", "21", "48180", Nothing),
-            New UplayBBDDEntrada("Tom Clancy's Rainbow Six", "2298", "15000", Nothing),
+            New UplayBBDDEntrada("Tom Clancy's Rainbow Six", "2298", Nothing, Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six 3", "2235", "19830", Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six: Lockdown", "358", "15000", Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six: Vegas", "88", "13540", Nothing),
