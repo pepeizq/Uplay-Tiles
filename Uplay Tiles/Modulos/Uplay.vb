@@ -1,6 +1,7 @@
 ﻿Imports Microsoft.Toolkit.Uwp.Helpers
 Imports Microsoft.Toolkit.Uwp.UI.Controls
 Imports Newtonsoft.Json
+Imports Uplay_Tiles.Configuracion
 Imports Windows.UI
 Imports Windows.UI.Xaml.Media.Animation
 
@@ -28,6 +29,7 @@ Module Uplay
         tbProgreso.Text = String.Empty
 
         Cache.Estado(False)
+        LimpiezaArchivos.Estado(False)
 
         Dim gv As AdaptiveGridView = pagina.FindName("gvTiles")
         gv.DesiredWidth = anchoColumna
@@ -180,6 +182,7 @@ Module Uplay
         End If
 
         Cache.Estado(True)
+        LimpiezaArchivos.Estado(True)
 
     End Sub
 

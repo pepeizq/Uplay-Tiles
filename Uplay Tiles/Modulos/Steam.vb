@@ -1,4 +1,5 @@
 ﻿Imports Microsoft.Toolkit.Uwp.Helpers
+Imports Uplay_Tiles.Configuracion
 
 Module Steam
 
