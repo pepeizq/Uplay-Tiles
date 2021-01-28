@@ -166,6 +166,8 @@ Module Uplay
 
         End Try
 
+        'Dim textoClipboard As String = String.Empty
+
         Dim gridJuegos As Grid = pagina.FindName("gridJuegos")
         Interfaz.Pestañas.Visibilidad(gridJuegos, recursos.GetString("Games"), Nothing)
 
@@ -176,10 +178,15 @@ Module Uplay
                 gv.Items.Clear()
 
                 For Each juego In listaJuegos
+                    'textoClipboard = textoClipboard + "<tr><td>" + juego.Titulo + "</td><td>" + juego.IDUplay + "</td></tr>" + Environment.NewLine
                     BotonEstilo(juego, gv)
                 Next
             End If
         End If
+
+        'Dim datos As New DataTransfer.DataPackage
+        'datos.SetText(textoClipboard)
+        'DataTransfer.Clipboard.SetContent(datos)
 
         Cache.Estado(True)
         LimpiezaArchivos.Estado(True)
