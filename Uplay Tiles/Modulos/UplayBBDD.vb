@@ -174,7 +174,7 @@
         Public IDSteam As String
         Public IDUplayOtrosPaises As List(Of UplayBBDDPaisID)
 
-        Public Sub New(ByVal titulo As String, ByVal idUplay As String, ByVal idSteam As String, ByVal idUplayOtrosPaises As List(Of UplayBBDDPaisID))
+        Public Sub New(titulo As String, idUplay As String, idSteam As String, idUplayOtrosPaises As List(Of UplayBBDDPaisID))
             Me.Titulo = titulo
             Me.IDUplay = idUplay
             Me.IDSteam = idSteam

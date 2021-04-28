@@ -2,7 +2,9 @@
 Imports Microsoft.Toolkit.Uwp.UI.Controls
 Imports Newtonsoft.Json
 Imports Uplay_Tiles.Configuracion
+Imports Windows.ApplicationModel.Core
 Imports Windows.UI
+Imports Windows.UI.Core
 Imports Windows.UI.Xaml.Media.Animation
 
 Module Uplay
@@ -160,13 +162,14 @@ Module Uplay
             i += 1
         Next
 
-        Try
-            Await helper.SaveFileAsync(Of List(Of Tile))("juegos", listaJuegos)
-        Catch ex As Exception
+        Await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.High,
+                                                                              Async Sub()
+                                                                                  Try
+                                                                                      Await helper.SaveFileAsync(Of List(Of Tile))("juegos", listaJuegos)
+                                                                                  Catch ex As Exception
 
-        End Try
-
-        'Dim textoClipboard As String = String.Empty
+                                                                                  End Try
+                                                                              End Sub)
 
         Dim gridJuegos As Grid = pagina.FindName("gridJuegos")
         Interfaz.Pestañas.Visibilidad(gridJuegos, recursos.GetString("Games"), Nothing)
@@ -178,15 +181,10 @@ Module Uplay
                 gv.Items.Clear()
 
                 For Each juego In listaJuegos
-                    'textoClipboard = textoClipboard + "<tr><td>" + juego.Titulo + "</td><td>" + juego.IDUplay + "</td></tr>" + Environment.NewLine
                     BotonEstilo(juego, gv)
                 Next
             End If
         End If
-
-        'Dim datos As New DataTransfer.DataPackage
-        'datos.SetText(textoClipboard)
-        'DataTransfer.Clipboard.SetContent(datos)
 
         Cache.Estado(True)
         LimpiezaArchivos.Estado(True)
