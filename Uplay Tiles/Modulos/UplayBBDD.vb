@@ -1,6 +1,7 @@
 ﻿Module UplayBBDD
 
     'https://github.com/wTonyChen/Uplay-AppID-List/blob/master/UplayAppIDs.json
+    'https://github.com/Haoose/UPLAY_GAME_ID
 
     Public Function Listado()
 
@@ -58,6 +59,7 @@
             New UplayBBDDEntrada("Far Cry 3 Blood Dragon", "205", "233270", Nothing),
             New UplayBBDDEntrada("Far Cry 4", "420", "298110", New List(Of UplayBBDDPaisID) From {New UplayBBDDPaisID("RU", "969")}),
             New UplayBBDDEntrada("Far Cry 5", "1803", "552520", Nothing),
+            New UplayBBDDEntrada("Far Cry 6", "5266", Nothing, Nothing),
             New UplayBBDDEntrada("Far Cry New Dawn", "5210", "939960", Nothing),
             New UplayBBDDEntrada("Far Cry Primal", "2010", "371660", Nothing),
             New UplayBBDDEntrada("Flashback", "422", "245730", Nothing),

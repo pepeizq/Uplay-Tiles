@@ -45,9 +45,6 @@
         MasTiles.Cargar()
         MasCosas.Cargar()
 
-        Dim recursos As New Resources.ResourceLoader()
-        Interfaz.Pestañas.Visibilidad(gridJuegos, recursos.GetString("Games"), Nothing)
-
     End Sub
 
 End Class

@@ -455,6 +455,9 @@
     <Content Include="Assets\Juegos\5183_mediana.png" />
     <Content Include="Assets\Juegos\5183_pequeña.jpg" />
     <Content Include="Assets\Juegos\5210_pequeña.jpg" />
+    <Content Include="Assets\Juegos\5266_ancha.png" />
+    <Content Include="Assets\Juegos\5266_grande.png" />
+    <Content Include="Assets\Juegos\5266_mediana.png" />
     <Content Include="Assets\Juegos\5277_grande.png" />
     <Content Include="Assets\Juegos\5277_mediana.png" />
     <Content Include="Assets\Juegos\5277_pequeña.jpg" />

@@ -2,9 +2,9 @@
 Imports Microsoft.Toolkit.Uwp.UI.Controls
 Imports Newtonsoft.Json
 Imports Uplay_Tiles.Configuracion
-Imports Windows.ApplicationModel.Core
+Imports Windows.Storage
+Imports Windows.Storage.FileProperties
 Imports Windows.UI
-Imports Windows.UI.Core
 Imports Windows.UI.Xaml.Media.Animation
 
 Module Uplay
@@ -38,9 +38,46 @@ Module Uplay
         gv.Items.Clear()
 
         Dim listaJuegos As New List(Of Tile)
+        Dim carpetaFicheros As StorageFolder = Nothing
+        Dim errorCarpeta As Boolean = False
 
-        If Await helper.FileExistsAsync("juegos") = True Then
-            listaJuegos = Await helper.ReadFileAsync(Of List(Of Tile))("juegos")
+        Try
+            carpetaFicheros = Await StorageFolder.GetFolderFromPathAsync(ApplicationData.Current.LocalFolder.Path + "\Juegos")
+        Catch ex As Exception
+            errorCarpeta = True
+        End Try
+
+        If errorCarpeta = True Then
+            Try
+                If File.Exists(ApplicationData.Current.LocalFolder.Path + "\Juegos") Then
+                    File.Delete(ApplicationData.Current.LocalFolder.Path + "\Juegos")
+                End If
+
+                Await ApplicationData.Current.LocalFolder.CreateFolderAsync("Juegos", CreationCollisionOption.ReplaceExisting)
+                carpetaFicheros = Await StorageFolder.GetFolderFromPathAsync(ApplicationData.Current.LocalFolder.Path + "\Juegos")
+            Catch ex As Exception
+
+            End Try
+        End If
+
+        If Not carpetaFicheros Is Nothing Then
+            Dim listaFicheros As IReadOnlyList(Of IStorageItem) = Await carpetaFicheros.GetFilesAsync
+
+            If Not listaFicheros Is Nothing Then
+                If listaFicheros.Count > 0 Then
+                    For Each fichero In listaFicheros
+                        Dim propiedades As BasicProperties = Await fichero.GetBasicPropertiesAsync
+
+                        If propiedades.Size > 0 Then
+                            If fichero.Name.Contains("juego_") Then
+                                Dim temp As Tile = Await helper.ReadFileAsync(Of Tile)("Juegos\" + fichero.Name)
+                                temp.Titulo = temp.Titulo.Trim
+                                listaJuegos.Add(temp)
+                            End If
+                        End If
+                    Next
+                End If
+            End If
         End If
 
         If listaJuegos Is Nothing Then
@@ -162,21 +199,54 @@ Module Uplay
             i += 1
         Next
 
-        Await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.High,
-                                                                              Async Sub()
-                                                                                  Try
-                                                                                      Await helper.SaveFileAsync(Of List(Of Tile))("juegos", listaJuegos)
-                                                                                  Catch ex As Exception
+        Dim resultadosBusqueda As New List(Of Interfaz.BusquedaFichero)
 
-                                                                                  End Try
-                                                                              End Sub)
+        If Not listaJuegos Is Nothing Then
+            If listaJuegos.Count > 0 Then
+                For Each juego In listaJuegos
+                    If Not juego Is Nothing Then
+                        Try
+                            If Await helper.FileExistsAsync("Juegos\juego_" + juego.IDUplay) = False Then
+                                Await helper.SaveFileAsync(Of Tile)("Juegos\juego_" + juego.IDUplay, juego)
+                            End If
+                        Catch ex As Exception
+
+                        End Try
+
+                        resultadosBusqueda.Add(New Interfaz.BusquedaFichero(juego.Titulo, "Juegos\juego_" + juego.IDUplay))
+                    End If
+                Next
+            End If
+        End If
+
+        Try
+            Await helper.SaveFileAsync(Of List(Of Interfaz.BusquedaFichero))("busqueda", resultadosBusqueda)
+        Catch ex As Exception
+
+        End Try
 
         Dim gridJuegos As Grid = pagina.FindName("gridJuegos")
         Interfaz.Pestañas.Visibilidad(gridJuegos, recursos.GetString("Games"), Nothing)
 
         If Not listaJuegos Is Nothing Then
             If listaJuegos.Count > 0 Then
-                listaJuegos.Sort(Function(x, y) x.Titulo.CompareTo(y.Titulo))
+                listaJuegos.Sort(Function(x, y)
+                                     If Not x Is Nothing Then
+                                         If Not y Is Nothing Then
+                                             Return x.Titulo.CompareTo(y.Titulo)
+                                         End If
+                                     End If
+
+                                     If Not x Is Nothing Then
+                                         Return x.Titulo
+                                     End If
+
+                                     If Not y Is Nothing Then
+                                         Return y.Titulo
+                                     End If
+
+                                     Return Nothing
+                                 End Function)
 
                 gv.Items.Clear()
 
@@ -193,17 +263,6 @@ Module Uplay
 
     Public Sub BotonEstilo(juego As Tile, gv As GridView)
 
-        Dim panel As New DropShadowPanel With {
-            .Margin = New Thickness(10, 10, 10, 10),
-            .ShadowOpacity = 0.9,
-            .BlurRadius = 10,
-            .MaxWidth = anchoColumna + 20,
-            .HorizontalAlignment = HorizontalAlignment.Center,
-            .VerticalAlignment = VerticalAlignment.Center
-        }
-
-        Dim boton As New Button
-
         Dim imagen As New ImageEx With {
             .Source = juego.ImagenGrande,
             .IsCacheEnabled = True,
@@ -214,16 +273,20 @@ Module Uplay
             .EnableLazyLoading = True
         }
 
-        If imagen.Source = Nothing Then
-            imagen.Source = juego.ImagenAncha
-        End If
-
-        boton.Tag = juego
-        boton.Content = imagen
-        boton.Padding = New Thickness(0, 0, 0, 0)
-        boton.Background = New SolidColorBrush(Colors.Transparent)
-
-        panel.Content = boton
+        Dim boton As New Button With {
+            .Tag = juego,
+            .Content = imagen,
+            .Padding = New Thickness(0, 0, 0, 0),
+            .Background = New SolidColorBrush(Colors.Transparent),
+            .Margin = New Thickness(10, 10, 10, 10),
+            .MinHeight = 40,
+            .MinWidth = 40,
+            .MaxWidth = anchoColumna + 20,
+            .BorderBrush = New SolidColorBrush(App.Current.Resources("ColorPrimario")),
+            .BorderThickness = New Thickness(1, 1, 1, 1),
+            .HorizontalAlignment = HorizontalAlignment.Center,
+            .VerticalAlignment = VerticalAlignment.Center
+        }
 
         Dim tbToolTip As TextBlock = New TextBlock With {
             .Text = juego.Titulo,
@@ -238,7 +301,7 @@ Module Uplay
         AddHandler boton.PointerEntered, AddressOf Interfaz.Entra_Boton_Imagen
         AddHandler boton.PointerExited, AddressOf Interfaz.Sale_Boton_Imagen
 
-        gv.Items.Add(panel)
+        gv.Items.Add(boton)
 
     End Sub
 
