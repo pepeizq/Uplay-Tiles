@@ -131,6 +131,7 @@
             New UplayBBDDEntrada("Tom Clancy's H.A.W.X. 2", "21", "48180", Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six", "2298", Nothing, Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six 3", "2235", "19830", Nothing),
+            New UplayBBDDEntrada("Tom Clancy's Rainbow Six Extraction", "5271", Nothing, Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six: Lockdown", "358", "15000", Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six: Vegas", "88", "13540", Nothing),
             New UplayBBDDEntrada("Tom Clancy's Rainbow Six: Vegas 2", "108", "15120", Nothing),

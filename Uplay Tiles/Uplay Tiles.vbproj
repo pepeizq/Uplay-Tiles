@@ -10,7 +10,7 @@
     <AssemblyName>Uplay Tiles</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -458,6 +458,9 @@
     <Content Include="Assets\Juegos\5266_ancha.png" />
     <Content Include="Assets\Juegos\5266_grande.png" />
     <Content Include="Assets\Juegos\5266_mediana.png" />
+    <Content Include="Assets\Juegos\5271_ancha.png" />
+    <Content Include="Assets\Juegos\5271_grande.png" />
+    <Content Include="Assets\Juegos\5271_mediana.png" />
     <Content Include="Assets\Juegos\5277_grande.png" />
     <Content Include="Assets\Juegos\5277_mediana.png" />
     <Content Include="Assets\Juegos\5277_pequeña.jpg" />
